@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소아 항생제 참고 자료 | PediAbx SNUBH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+  --teal-50:#E1F5EE;--teal-100:#9FE1CB;--teal-200:#5DCAA5;--teal-400:#1D9E75;--teal-600:#0F6E56;--teal-800:#085041;
+  --blue-50:#E6F1FB;--blue-100:#B5D4F4;--blue-400:#378ADD;--blue-600:#185FA5;--blue-800:#0C447C;
+  --amber-50:#FAEEDA;--amber-100:#FAC775;--amber-400:#BA7517;--amber-600:#854F0B;--amber-800:#633806;
+  --red-50:#FCEBEB;--red-100:#F7C1C1;--red-400:#E24B4A;--red-600:#A32D2D;--red-800:#791F1F;
+  --gray-50:#F1EFE8;--gray-100:#D3D1C7;--gray-400:#888780;--gray-600:#5F5E5A;--gray-800:#444441;
+  --purple-50:#EEEDFE;--purple-100:#CECBF6;--purple-400:#7F77DD;--purple-600:#534AB7;--purple-800:#3C3489;
+  --green-50:#EAF3DE;--green-100:#C0DD97;--green-400:#639922;--green-600:#3B6D11;--green-800:#27500A;
+  --coral-50:#FAECE7;--coral-100:#F5C4B3;--coral-400:#D85A30;--coral-600:#993C1D;--coral-800:#712B13;
+  --pink-50:#FBEAF0;--pink-100:#F4C0D1;--pink-400:#D4537E;--pink-600:#993556;
+  --bg:#F5F7F9;--card:#FFF;--border:rgba(0,0,0,0.09);
+  --text:#1A1A1A;--text-muted:#5F5E5A;--text-hint:#888780;
+  --r:10px;--rl:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;}
+
+.site-header{background:var(--teal-600);padding:0 20px;display:flex;align-items:center;gap:12px;height:54px;position:sticky;top:0;z-index:200;}
+.logo{color:#fff;font-size:17px;font-weight:700;}
+.logo span{color:var(--teal-100);font-weight:400;font-size:12px;margin-left:8px;}
+.header-spacer{flex:1;}
+.hbadge{background:rgba(255,255,255,0.15);color:#fff;font-size:11px;padding:3px 10px;border-radius:20px;margin-left:6px;}
+
+.app-layout{display:grid;grid-template-columns:268px 1fr;min-height:calc(100vh - 54px);}
+.sidebar{background:var(--card);border-right:0.5px solid var(--border);overflow-y:auto;position:sticky;top:54px;height:calc(100vh - 54px);}
+.main-area{padding:24px 28px;overflow-y:auto;}
+
+.search-wrap{padding:12px 12px 8px;border-bottom:0.5px solid var(--border);position:relative;}
+.search-icon{position:absolute;left:22px;top:50%;transform:translateY(-50%);color:var(--text-hint);font-size:13px;}
+.search-input{width:100%;border:0.5px solid var(--border);border-radius:var(--r);padding:7px 10px 7px 32px;font-size:13px;font-family:inherit;background:var(--bg);color:var(--text);}
+.search-input:focus{outline:none;border-color:var(--teal-400);}
+
+.cat-section{padding:8px 12px 4px;font-size:10px;font-weight:700;color:var(--text-hint);text-transform:uppercase;letter-spacing:0.5px;}
+
+.ind-pills{padding:6px 12px 10px;border-bottom:0.5px solid var(--border);display:flex;flex-wrap:wrap;gap:5px;}
+.ind-pill{padding:4px 10px;border:0.5px solid var(--border);border-radius:20px;font-size:11px;cursor:pointer;background:var(--card);transition:all 0.12s;font-family:inherit;color:var(--text);}
+.ind-pill:hover,.ind-pill.active{background:var(--teal-50);border-color:var(--teal-400);color:var(--teal-600);}
+
+.drug-item{display:flex;align-items:center;padding:7px 12px;cursor:pointer;border-left:3px solid transparent;transition:all 0.12s;gap:9px;}
+.drug-item:hover{background:var(--teal-50);}
+.drug-item.active{background:var(--teal-50);border-left-color:var(--teal-400);}
+.drug-item .dn{font-size:13px;font-weight:500;}
+.drug-item .dc{font-size:11px;color:var(--text-hint);}
+.rbadge{margin-left:auto;font-size:9px;padding:2px 6px;border-radius:20px;background:var(--red-50);color:var(--red-600);white-space:nowrap;}
+.nbadge{margin-left:auto;font-size:9px;padding:2px 6px;border-radius:20px;background:var(--green-50);color:var(--green-600);white-space:nowrap;}
+
+/* MAIN */
+.drug-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.drug-icon{width:50px;height:50px;border-radius:var(--rl);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.drug-title h1{font-size:21px;font-weight:700;}
+.drug-title .dmeta{font-size:13px;color:var(--text-muted);margin-top:2px;}
+.tag-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px;}
+.tag{font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;}
+.tag.beta{background:var(--blue-50);color:var(--blue-800);}
+.tag.glyco{background:var(--purple-50);color:var(--purple-800);}
+.tag.amino{background:var(--amber-50);color:var(--amber-800);}
+.tag.carbap{background:var(--coral-50);color:var(--coral-800);}
+.tag.macro{background:var(--green-50);color:var(--green-800);}
+.tag.misc{background:var(--gray-50);color:var(--gray-800);}
+.tag.rf{background:var(--red-50);color:var(--red-800);}
+.tag.ok{background:var(--teal-50);color:var(--teal-800);}
+
+/* CALC */
+.calc-card{background:var(--teal-50);border:0.5px solid var(--teal-100);border-radius:var(--rl);padding:16px;margin-bottom:20px;}
+.calc-card h3{font-size:13px;font-weight:600;color:var(--teal-600);margin-bottom:10px;}
+.calc-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.wt-input{width:85px;padding:7px 10px;border:0.5px solid var(--teal-200);border-radius:var(--r);font-size:14px;font-family:inherit;background:#fff;}
+.wt-input:focus{outline:none;border-color:var(--teal-400);}
+.dose-results{margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;}
+.drc{background:#fff;border:0.5px solid var(--teal-100);border-radius:var(--r);padding:10px 12px;}
+.drc .dlabel{font-size:10px;color:var(--text-hint);margin-bottom:2px;}
+.drc .dval{font-size:17px;font-weight:600;color:var(--teal-600);font-family:'JetBrains Mono',monospace;}
+.drc .dsub{font-size:11px;color:var(--text-muted);}
+
+/* TABS */
+.tab-row{display:flex;border-bottom:0.5px solid var(--border);margin-bottom:16px;gap:0;overflow-x:auto;}
+.tab-btn{padding:8px 14px;font-size:13px;font-family:inherit;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;color:var(--text-muted);transition:all 0.12s;white-space:nowrap;margin-bottom:-0.5px;}
+.tab-btn:hover{color:var(--text);}
+.tab-btn.active{color:var(--teal-600);border-bottom-color:var(--teal-400);font-weight:500;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* SECTION CARDS */
+.sc{background:var(--card);border:0.5px solid var(--border);border-radius:var(--rl);padding:18px;margin-bottom:14px;}
+.sc h3{font-size:13px;font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
+.sc.warn{border-left:3px solid var(--amber-400);}
+.sc.danger{border-left:3px solid var(--red-400);}
+.sc.info{border-left:3px solid var(--blue-400);}
+.sc.ok{border-left:3px solid var(--teal-400);}
+
+/* TABLES */
+.dt{width:100%;border-collapse:collapse;font-size:12px;}
+.dt th{background:var(--gray-50);padding:7px 10px;text-align:left;font-weight:600;font-size:11px;color:var(--text-muted);border-bottom:0.5px solid var(--border);}
+.dt td{padding:8px 10px;border-bottom:0.5px solid var(--gray-50);vertical-align:top;}
+.dt tr:last-child td{border-bottom:none;}
+.dt tr:hover td{background:var(--teal-50);}
+.mono{font-family:'JetBrains Mono',monospace;font-size:11px;}
+
+/* MIX */
+.mix-grid{display:grid;gap:8px;}
+.mix-row{display:grid;grid-template-columns:1fr 1.2fr 1fr 1.5fr;gap:10px;align-items:start;padding:9px 12px;background:var(--bg);border-radius:var(--r);font-size:12px;}
+.mix-row.hd{font-weight:600;font-size:11px;color:var(--text-hint);background:none;padding-bottom:2px;}
+
+/* RENAL */
+.rg{display:grid;gap:7px;}
+.rrow{display:grid;grid-template-columns:110px 110px 1fr;gap:10px;align-items:start;padding:8px 10px;border-radius:var(--r);font-size:12px;}
+.rrow.hd{font-weight:600;font-size:11px;color:var(--text-hint);padding-bottom:0;}
+.rrow:not(.hd){background:var(--bg);}
+.gfr-badge{font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;text-align:center;display:inline-block;}
+.gfr-n{background:var(--green-50);color:var(--green-600);}
+.gfr-m{background:var(--amber-50);color:var(--amber-600);}
+.gfr-s{background:var(--coral-50);color:var(--coral-600);}
+.gfr-c{background:var(--red-50);color:var(--red-600);}
+
+/* ADR */
+.adr-list{display:grid;gap:7px;}
+.adr-item{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border-radius:var(--r);background:var(--bg);}
+.adr-sev{font-size:10px;font-weight:700;padding:2px 7px;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-top:1px;}
+.sev-c{background:var(--gray-50);color:var(--gray-600);}
+.sev-m{background:var(--amber-50);color:var(--amber-600);}
+.sev-s{background:var(--red-50);color:var(--red-600);}
+.adr-name{font-weight:500;font-size:12px;}
+.adr-action{font-size:11px;color:var(--text-muted);margin-top:2px;}
+
+/* INDICATION VIEW */
+.ind-drug-card{display:flex;align-items:center;gap:10px;padding:11px 14px;background:var(--card);border:0.5px solid var(--border);border-radius:var(--r);cursor:pointer;transition:all 0.12s;margin-bottom:7px;}
+.ind-drug-card:hover{border-color:var(--teal-400);background:var(--teal-50);}
+.idc-icon{width:34px;height:34px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
+.idc-name{font-weight:600;font-size:13px;}
+.idc-detail{font-size:11px;color:var(--text-muted);}
+
+/* NOTE BOXES */
+.nbox{background:var(--blue-50);border-left:3px solid var(--blue-400);border-radius:0 var(--r) var(--r) 0;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--blue-800);}
+.wbox{background:var(--amber-50);border-left:3px solid var(--amber-400);border-radius:0 var(--r) var(--r) 0;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--amber-800);}
+.rbox{background:var(--red-50);border-left:3px solid var(--red-400);border-radius:0 var(--r) var(--r) 0;padding:9px 12px;margin-top:10px;font-size:12px;color:var(--red-800);}
+
+.badge-first{background:var(--teal-50);color:var(--teal-800);font-size:10px;padding:2px 8px;border-radius:20px;font-weight:600;margin-left:6px;}
+
+.empty-state{text-align:center;padding:60px 20px;color:var(--text-hint);}
+.empty-state i{font-size:44px;margin-bottom:12px;display:block;}
+
+.hidden{display:none!important;}
+.divider{height:0.5px;background:var(--border);margin:6px 0;}
+
+/* Protocol boxes */
+.proto-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;}
+.proto-card{background:var(--card);border:0.5px solid var(--border);border-radius:var(--rl);padding:14px;}
+.proto-card.low{border-top:3px solid var(--teal-400);}
+.proto-card.high{border-top:3px solid var(--red-400);}
+.proto-card h4{font-size:13px;font-weight:600;margin-bottom:8px;}
+.proto-card ul{font-size:12px;padding-left:16px;color:var(--text-muted);}
+.proto-card ul li{margin-bottom:3px;}
+
+@media(max-width:768px){.app-layout{grid-template-columns:1fr;}.sidebar{position:static;height:auto;}.main-area{padding:14px;}.proto-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">PediAbx <span>소아청소년과 항생제 참고자료</span></div>
+  <div class="header-spacer"></div>
+  <span class="hbadge">SNUBH 소아 항생제 가이드북 기반</span>
+  <span class="hbadge">Ver 2.0 · 2025</span>
+</header>
+
+<div class="app-layout">
+<aside class="sidebar">
+  <div class="search-wrap">
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+    <input class="search-input" id="drugSearch" type="text" placeholder="항생제 검색 (한글/영문)..." oninput="filterDrugs(this.value)">
+  </div>
+  <div class="cat-section">질환별 검색</div>
+  <div class="ind-pills">
+    <button class="ind-pill" onclick="showInd('uti',this)">UTI</button>
+    <button class="ind-pill" onclick="showInd('sepsis',this)">Neonatal Sepsis</button>
+    <button class="ind-pill" onclick="showInd('pneumonia',this)">폐렴</button>
+    <button class="ind-pill" onclick="showInd('mycoplasma',this)">Mycoplasma</button>
+    <button class="ind-pill" onclick="showInd('meningitis',this)">수막염</button>
+    <button class="ind-pill" onclick="showInd('ssti',this)">SSTI</button>
+    <button class="ind-pill" onclick="showInd('intraabdominal',this)">복강내 감염</button>
+    <button class="ind-pill" onclick="showInd('covid',this)">COVID-19</button>
+    <button class="ind-pill" onclick="showInd('febrile_neutropenia',this)">발열성 호중구 감소증</button>
+    <button class="ind-pill" onclick="showInd('antifungal',this)">항진균제</button>
+  </div>
+  <div class="cat-section" style="margin-top:4px;">항생제 (IV)</div>
+  <div id="ivDrugList"></div>
+  <div class="divider"></div>
+  <div class="cat-section">항생제 (경구)</div>
+  <div id="poDrugList"></div>
+  <div class="divider"></div>
+  <div class="cat-section">항바이러스제</div>
+  <div id="avDrugList"></div>
+  <div class="divider"></div>
+  <div class="cat-section">항진균제</div>
+  <div id="afDrugList"></div>
+</aside>
+
+<main class="main-area" id="mainContent">
+  <div class="empty-state" id="welcomeScreen">
+    <i class="fa-solid fa-pills"></i>
+    <p style="font-size:18px;font-weight:600;color:var(--text);">소아 항생제 참고 자료</p>
+    <p style="margin-top:8px;font-size:13px;">좌측에서 항생제를 선택하거나 질환별로 검색하세요.<br>분당서울대병원 소아 항생제 가이드북 기반</p>
+  </div>
+  <div id="indicationView" class="hidden"></div>
+  <div id="drugDetailView" class="hidden"></div>
+</main>
+</div>
+
+<script>
+const DRUGS = [
+// ===================== IV ANTIBIOTICS =====================
+{id:'cefazolin',name:'Cefazolin',kor:'세파졸린',cat:'IV',class:'1세대 Cephalosporin',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['ssti','febrile_neutropenia'],
+doses:[
+  {ind:'경증-중등도 감염 (영아/소아)',dose:'25-50 mg/kg/day',interval:'÷ q8h',route:'IV',max:'6 g/day',note:''},
+  {ind:'중증 감염',dose:'100 mg/kg/day',interval:'÷ q8h',route:'IV',max:'6 g/day',note:''},
+  {ind:'수술 예방 (체중 ≤120kg)',dose:'30 mg/kg',interval:'수술 60분 전 1회',route:'IV',max:'2 g/dose',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'20-40 mg/mL',rate:'IV push (slow)',note:'수술 예방 시 bolus 가능. max conc: 200mg/mL'},
+],
+renal:[
+  {gfr:'≥50',label:'정상',dose:'용량 조정 불필요',note:'q8h 유지'},
+  {gfr:'CrCl 10-30',label:'경도 저하',dose:'표준 용량 q12h',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'표준 용량 q24h',note:'HD 후 보충'},
+],
+adrs:[
+  {name:'과민반응 (발진, 두드러기)',sev:'monitor',action:'페니실린 알레르기 교차반응 ~1-2%. 투여 중단, 항히스타민제'},
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+],
+note:'MSSA cellulitis, 수술 예방에 1차 선택. MRSA에는 효과 없음.'},
+
+{id:'piperacillin_tazo',name:'Piperacillin-Tazobactam',kor:'피페라실린-타조박탐 (Tazocin)',cat:'IV',class:'BL/BLI',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['sepsis','pneumonia','intraabdominal','ssti','febrile_neutropenia'],
+doses:[
+  {ind:'중증 감염 (소아, pip 기준)',dose:'90 mg/kg/dose (pip+tazo)',interval:'q6h',route:'IV',max:'20 g/day (pip)',note:'pip 기준으로 계산'},
+  {ind:'Neonatal (≤28일)',dose:'100 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:'pip 기준'},
+  {ind:'Febrile neutropenia',dose:'90-100 mg/kg/dose',interval:'q6h',route:'IV',max:'20 g/day',note:''},
+],
+mix:[
+  {sol:'NS 100 mL (>1g) / NS 50 mL (<1g)',conc:'22.5-90 mg/mL (pip+tazo)',rate:'30분',note:'Extended infusion (4h) 시 PK/PD 최적화'},
+],
+renal:[
+  {gfr:'CrCl 20-40',label:'중등도 저하',dose:'30% dose q6h (성인: 2.25g q6h)',note:'소아는 비례 조정'},
+  {gfr:'CrCl <20',label:'중증 저하',dose:'30% dose q8h (성인: 2.25g q8h)',note:''},
+  {gfr:'HD',label:'혈액투석',dose:'성인 2.25g q8-12h + HD 후 0.75g 추가',note:''},
+],
+adrs:[
+  {name:'저칼륨혈증',sev:'monitor',action:'장기 투여 시 전해질 모니터링'},
+  {name:'혈소판 기능 저하',sev:'monitor',action:'출혈 징후 모니터링'},
+  {name:'Neurotoxicity (고용량)',sev:'serious',action:'경련, 의식 변화 시 즉시 보고 및 용량 감량'},
+],
+note:'Pseudomonas, 광범위 그람음성균. ESBL 일부에 효과. KPC 생성균에 비효과적.'},
+
+{id:'gentamicin',name:'Gentamicin',kor:'겐타마이신',cat:'IV',class:'Aminoglycoside',ctag:'amino',icon:'🟡',ibg:'var(--amber-50)',renal:true,
+indications:['sepsis','uti','intraabdominal'],
+doses:[
+  {ind:'Neonatal (PMA <30주)',dose:'5 mg/kg/dose',interval:'q48h',route:'IV',max:'-',note:'Extended interval dosing (EID)'},
+  {ind:'Neonatal (PMA 30-34주)',dose:'4-5 mg/kg/dose',interval:'q36-48h',route:'IV',max:'-',note:'EID'},
+  {ind:'Neonatal (PMA ≥35주, 0-7일)',dose:'4-5 mg/kg/dose',interval:'q36h',route:'IV',max:'-',note:''},
+  {ind:'Neonatal (PMA ≥35주, >7일)',dose:'4-5 mg/kg/dose',interval:'q24h',route:'IV',max:'-',note:''},
+  {ind:'영아/소아 Traditional dosing',dose:'2.5 mg/kg/dose',interval:'q8h',route:'IV/IM',max:'-',note:'TDM: Peak 5-10, Trough <2 mcg/mL'},
+  {ind:'영아/소아 Extended interval',dose:'7-10 mg/kg/dose',interval:'q24h',route:'IV',max:'-',note:'더 선호. 6-14h 후 level 측정'},
+  {ind:'7B-HO 병동 표준',dose:'2.5 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:'투여 시작 2-3일 후 pre/post TDM, 오전 채혈'},
+],
+mix:[
+  {sol:'NS 100mL (>50mg) / NS 50mL (>20mg) / NS 20mL (<20mg)',conc:'최대 10 mg/mL',rate:'30분',note:'Ampicillin/Cephalosporin과 1시간 이상 간격 유지'},
+],
+renal:[
+  {gfr:'CrCl 40-60',label:'경도 저하',dose:'q12h로 간격 연장',note:'TDM 필수'},
+  {gfr:'CrCl 20-40',label:'중등도 저하',dose:'q24h',note:'TDM 필수'},
+  {gfr:'CrCl <20',label:'중증 저하',dose:'표준 용량 → level monitoring',note:''},
+],
+adrs:[
+  {name:'신독성 (SCr 상승)',sev:'serious',action:'매일 SCr/BUN 모니터링. TLS 등 신기능 저하 시 즉시 level check!'},
+  {name:'이독성 (청력 소실)',sev:'serious',action:'비가역적 손상 가능. 청각 모니터링. 즉시 투여 중단'},
+  {name:'신경근 차단',sev:'serious',action:'Ca2+ 투여, 필요 시 neostigmine'},
+],
+note:'TDM 필수 (Target: Peak >5, Trough <1 mcg/mL). Ampicillin, Cephalosporin 계열과 1시간 이상 간격 두고 투여. 혼합 금지.'},
+
+{id:'amikacin',name:'Amikacin',kor:'아미카신',cat:'IV',class:'Aminoglycoside',ctag:'amino',icon:'🟡',ibg:'var(--amber-50)',renal:true,
+indications:['sepsis','febrile_neutropenia'],
+doses:[
+  {ind:'소아 표준',dose:'22.5 mg/kg/day',interval:'÷ q8h (7.5 mg/kg/dose)',route:'IV',max:'1.5 g/day',note:'투여 시작 2-3일 후 pre/post TDM'},
+  {ind:'중증 감염 Loading',dose:'5-7.5 mg/kg',interval:'Loading',route:'IV',max:'-',note:'이후 TDM 결과에 따라 조정'},
+],
+mix:[
+  {sol:'NS 100mL (>100mg) / NS 50mL (<100mg)',conc:'0.25-5 mg/mL',rate:'30분',note:'Ampicillin/Cephalosporin과 간격 유지'},
+],
+renal:[
+  {gfr:'CrCl 40-60',label:'경도 저하',dose:'q12h',note:'TDM 필수'},
+  {gfr:'CrCl 20-40',label:'중등도 저하',dose:'q24h',note:'TDM 필수'},
+  {gfr:'CrCl <20',label:'중증 저하',dose:'표준 용량 → level monitoring',note:''},
+],
+adrs:[
+  {name:'신독성',sev:'serious',action:'TDM: Target Peak >25, Trough <4 mcg/mL. 신기능 저하 시 즉시 level check!'},
+  {name:'이독성',sev:'serious',action:'비가역적 손상 가능'},
+],
+note:'TDM 필수 (Target: Peak >25, Trough <4 mcg/mL). Aminoglycoside 중 내성 범위가 더 좁음.'},
+
+{id:'cefotaxime',name:'Cefotaxime',kor:'세포탁심',cat:'IV',class:'3세대 Cephalosporin',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['sepsis','meningitis','pneumonia','uti'],
+doses:[
+  {ind:'Neonatal (0-7일)',dose:'50 mg/kg/dose',interval:'q12h',route:'IV',max:'-',note:'수막염 의심 시 선택'},
+  {ind:'Neonatal (8-28일)',dose:'50 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:''},
+  {ind:'수막염 (신생아)',dose:'50 mg/kg/dose',interval:'q6-8h',route:'IV',max:'-',note:''},
+  {ind:'중증 감염 (영아/소아, 일반)',dose:'100-200 mg/kg/day',interval:'÷ q6-8h',route:'IV',max:'12 g/day',note:'SNUBH 7B-HO 기준'},
+  {ind:'수막염 (영아/소아)',dose:'75 mg/kg/dose',interval:'q6h',route:'IV',max:'12 g/day',note:'Vancomycin 병용 고려 (PCN 내성)'},
+],
+mix:[
+  {sol:'NS or D5W',conc:'IV push: max 100mg/mL (3-5분)',rate:'일반: 30-60분',note:'신생아: 20 mg/mL 이하 권장'},
+],
+renal:[
+  {gfr:'CrCl ≥20',label:'정상/경도',dose:'용량 조정 불필요',note:''},
+  {gfr:'CrCl <20',label:'중증 저하',dose:'50% 감량',note:'CrCl <10: q24h'},
+],
+adrs:[
+  {name:'과민반응 (발진)',sev:'monitor',action:'페니실린 알레르기 교차반응 ~1%'},
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+],
+note:'신생아 황달 환자에서 ceftriaxone 대신 선택. 그람음성균 및 수막염에 적합.'},
+
+{id:'meropenem',name:'Meropenem',kor:'메로페넴',cat:'IV',class:'Carbapenem',ctag:'carbap',icon:'🟠',ibg:'var(--coral-50)',renal:true,
+indications:['sepsis','meningitis','pneumonia','intraabdominal','febrile_neutropenia'],
+doses:[
+  {ind:'Neonatal (≤14일, ≤2kg)',dose:'20 mg/kg/dose',interval:'q12h',route:'IV',max:'-',note:''},
+  {ind:'Neonatal (≤14일, >2kg)',dose:'20 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:''},
+  {ind:'Neonatal (>14일)',dose:'20 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:'보험: 생후 3개월 미만 비인정'},
+  {ind:'중증 감염 (영아/소아)',dose:'20 mg/kg/dose',interval:'q8h',route:'IV',max:'6 g/day',note:'성인 1g q8h'},
+  {ind:'수막염',dose:'40 mg/kg/dose',interval:'q8h',route:'IV',max:'6 g/day',note:'수막염 전용 용량'},
+  {ind:'Febrile neutropenia/CF',dose:'40 mg/kg/dose',interval:'q8h',route:'IV',max:'6 g/day',note:''},
+],
+mix:[
+  {sol:'NS 100mL (>1g) / NS 50mL (<1g)',conc:'최대 20 mg/mL',rate:'30분 (표준) / 3-4시간 (EI)',note:'Extended infusion(EI): PK/PD 최적화. MIC 높은 균주에 유리'},
+],
+renal:[
+  {gfr:'CrCl 26-50',label:'경도 저하',dose:'표준 용량 q12h',note:''},
+  {gfr:'CrCl 10-25',label:'중등도 저하',dose:'50% 용량 q12h',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'50% 용량 q24h',note:'HD 후 보충'},
+  {gfr:'CRRT',label:'CRRT',dose:'20-40 mg/kg q8-12h',note:'모니터링'},
+],
+adrs:[
+  {name:'경련 (특히 신기능 저하+고용량)',sev:'serious',action:'신기능 저하 시 용량 조정 필수. 항경련제 고려'},
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+  {name:'C. difficile 설사',sev:'serious',action:'광범위 항생제이므로 위험도 높음. 변 C.diff 검사'},
+],
+note:'ESBL 포함 광범위 그람음성균에 효과. Imipenem보다 우선 사용 (SNUBH). 보험: 소아 3개월 이상 중증/난치성 감염.'},
+
+{id:'imipenem',name:'Imipenem',kor:'이미페넴',cat:'IV',class:'Carbapenem',ctag:'carbap',icon:'🟠',ibg:'var(--coral-50)',renal:true,
+indications:['sepsis','febrile_neutropenia'],
+doses:[
+  {ind:'소아 (표준)',dose:'25 mg/kg/dose',interval:'q6h',route:'IV',max:'4 g/day',note:'Meropenem 선호 (SNUBH). Imipenem은 2차로 사용'},
+],
+mix:[
+  {sol:'NS 150mL (>500mg) / NS 100mL (<500mg)',conc:'최대 7 mg/mL',rate:'>500mg: 60분, <500mg: 30분',note:''},
+],
+renal:[
+  {gfr:'CrCl 41-70',label:'경도 저하',dose:'q6h, 50% 감량',note:''},
+  {gfr:'CrCl 21-40',label:'중등도 저하',dose:'q8h, 63% 감량',note:''},
+  {gfr:'CrCl 6-20',label:'중증 저하',dose:'q12h, 75% 감량',note:''},
+  {gfr:'CrCl <5',label:'말기 신부전',dose:'투여 금지',note:''},
+],
+adrs:[
+  {name:'경련',sev:'serious',action:'Meropenem보다 경련 빈도 높음'},
+  {name:'C. difficile',sev:'serious',action:'광범위 항생제 주의'},
+],
+note:'⚠️ SNUBH: Meropenem 우선 사용. Imipenem은 대안. 보험: 6주 이상 장기 투여 시 삭감 주의.'},
+
+{id:'vancomycin',name:'Vancomycin',kor:'반코마이신',cat:'IV',class:'Glycopeptide',ctag:'glyco',icon:'🟣',ibg:'var(--purple-50)',renal:true,
+indications:['sepsis','meningitis','ssti','pneumonia','febrile_neutropenia'],
+doses:[
+  {ind:'Neonatal (PMA <29주, 0-14일)',dose:'15 mg/kg/dose',interval:'q24h',route:'IV',max:'-',note:'AUC-guided 투여 권장'},
+  {ind:'Neonatal (PMA 29-35주)',dose:'15 mg/kg/dose',interval:'q12h',route:'IV',max:'-',note:''},
+  {ind:'Neonatal (PMA ≥36주)',dose:'15 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:''},
+  {ind:'영아/소아 (7B-HO 표준)',dose:'40 mg/kg/day (=10mg/kg/dose)',interval:'q6h',route:'IV',max:'3 g/day',note:'투여 시작 2-3일 후 Pre level TDM'},
+  {ind:'수막염/중증 감염',dose:'20 mg/kg/dose',interval:'q6h',route:'IV',max:'60 mg/kg/day',note:''},
+  {ind:'성인 (참고)',dose:'15-20 mg/kg/dose',interval:'q12h',route:'IV',max:'-',note:''},
+],
+mix:[
+  {sol:'NS (권장) or D5W',conc:'재구성: WFI 10mL + 500mg vial (50mg/mL)',rate:'최소 60분 이상 (10mg/min 이하)',note:'최종 농도 5mg/mL 이하. NS 150mL(>500mg) / NS 100mL(>250mg) / NS 50mL(<250mg)'},
+],
+renal:[
+  {gfr:'CrCl >90',label:'정상',dose:'q6h',note:'AUC/MIC 목표 400-600'},
+  {gfr:'CrCl 70-89',label:'경도 저하',dose:'q8h',note:'TDM 필수'},
+  {gfr:'CrCl 46-69',label:'중등도 저하',dose:'q12h',note:''},
+  {gfr:'CrCl 30-45',label:'중등도 저하',dose:'q18h',note:''},
+  {gfr:'CrCl 15-29',label:'중증 저하',dose:'q24h',note:''},
+  {gfr:'CrCl <15',label:'말기 신부전',dose:'혈중농도 모니터링',note:''},
+],
+adrs:[
+  {name:'Red man syndrome (홍조, 가려움)',sev:'monitor',action:'주입 속도 늦추기. 최소 60분 이상. 항히스타민제. 알레르기 반응 아님'},
+  {name:'신독성',sev:'serious',action:'AUC-guided 투여 시 위험 감소. SCr 모니터링. 신독성 약물 병용 회피'},
+  {name:'이독성',sev:'serious',action:'고농도 지속 투여 회피. 청력 모니터링'},
+],
+note:'TDM: AUC/MIC 400-600 mg·h/L 목표 (2020 가이드라인). Trough-only 더 이상 권고 안 함. 1g/day 이상 또는 7일 이상 투여 시 level check.'},
+
+{id:'teicoplanin',name:'Teicoplanin',kor:'테이코플라닌',cat:'IV',class:'Glycopeptide',ctag:'glyco',icon:'🟣',ibg:'var(--purple-50)',renal:true,
+indications:['ssti','sepsis'],
+doses:[
+  {ind:'Loading (소아)',dose:'10 mg/kg/dose',interval:'q12h × 3회',route:'IV',max:'400 mg/dose',note:''},
+  {ind:'Maintenance (소아)',dose:'10 mg/kg/dose',interval:'q24h',route:'IV',max:'400 mg/dose',note:'Loading 후 24시간부터 유지'},
+  {ind:'성인 Loading',dose:'400 mg',interval:'q12h × 3회',route:'IV',max:'400 mg/dose',note:''},
+  {ind:'성인 Maintenance',dose:'400 mg',interval:'q24h',route:'IV',max:'400 mg/dose',note:''},
+],
+mix:[
+  {sol:'Slow IV push',conc:'-',rate:'Slow IV push',note:'보험: Vancomycin 부작용/효과 없을 때. 보험일수 14일 (G(+) 균 동정 시 기간 제한 없음)'},
+],
+renal:[
+  {gfr:'CrCl 30-80',label:'중등도 저하',dose:'6mg/kg/dose Loading 3회 → 6mg/kg q48h',note:''},
+  {gfr:'CrCl <30 (HD)',label:'중증/HD',dose:'6mg/kg/dose Loading 3회 → 6mg/kg q72h',note:''},
+],
+adrs:[
+  {name:'과민반응',sev:'monitor',action:'Vancomycin 대비 Red man syndrome 빈도 낮음'},
+  {name:'신독성/이독성',sev:'monitor',action:'Vancomycin보다 신독성 위험 낮음'},
+],
+note:'Vancomycin 부작용 또는 실패 시 대안. 보험 기준: Vancomycin 투여 중 부작용 또는 효과 없을 때.'},
+
+{id:'tigecycline',name:'Tigecycline',kor:'티게사이클린 (Tygacil)',cat:'IV',class:'Glycylcycline',ctag:'misc',icon:'🔴',ibg:'var(--red-50)',renal:false,
+indications:['ssti','intraabdominal'],
+doses:[
+  {ind:'소아 Loading',dose:'1.5 mg/kg/dose',interval:'1회 Loading',route:'IV',max:'100 mg',note:''},
+  {ind:'소아 Maintenance (24h 후)',dose:'1 mg/kg/dose',interval:'q12h',route:'IV',max:'50 mg/dose',note:''},
+  {ind:'성인 Loading',dose:'100 mg',interval:'1회',route:'IV',max:'-',note:''},
+  {ind:'성인 Maintenance',dose:'50 mg',interval:'q12h',route:'IV',max:'-',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'최종 농도 ≤1 mg/mL',rate:'60분',note:'NS 100mL에 희석'},
+],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요',note:''},
+],
+adrs:[
+  {name:'구역/구토 (흔함)',sev:'common',action:'가장 흔한 부작용. 진토제 투여 고려'},
+  {name:'광과민성',sev:'monitor',action:'햇빛 노출 주의'},
+],
+note:'cSSI, cIAI에 사용. Pseudomonas, Proteus에 효과 없음. 보험 기준 매우 엄격.'},
+
+{id:'metronidazole',name:'Metronidazole',kor:'메트로니다졸',cat:'IV',class:'Nitroimidazole',ctag:'misc',icon:'⚫',ibg:'var(--gray-50)',renal:false,
+indications:['intraabdominal'],
+doses:[
+  {ind:'Loading',dose:'15 mg/kg/dose',interval:'1회',route:'IV',max:'4 g/day',note:''},
+  {ind:'Maintenance (6h 후)',dose:'7.5 mg/kg/dose',interval:'q6h',route:'IV',max:'4 g/day',note:'12세 이상: 500mg IV q8h'},
+],
+mix:[
+  {sol:'희석 완료 제재',conc:'-',rate:'수액오더 불필요',note:'희석 완료 제재로 공급. Busulfan과 DI 존재. 주사제 보험일수: 7일'},
+],
+renal:[
+  {gfr:'CrCl ≥10',label:'경도 이상',dose:'용량 조정 불필요',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'50% 감량',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'구역, 구토, 금속성 맛'},
+  {name:'신경독성 (고용량/장기)',sev:'monitor',action:'말초신경병증. 가역적'},
+  {name:'Disulfiram 반응',sev:'monitor',action:'투여 중 알코올 섭취 금지'},
+],
+note:'혐기성균 감염에 필수. Busulfan과 약물 상호작용 주의.'},
+
+{id:'aztreonam',name:'Aztreonam',kor:'아즈트레오남',cat:'IV',class:'Monobactam',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['pneumonia','uti','sepsis'],
+doses:[
+  {ind:'소아 (일반)',dose:'30 mg/kg/dose',interval:'q6-8h',route:'IV',max:'8 g/day',note:''},
+  {ind:'소아 (중증, Pseudomonas, ≥2세)',dose:'50 mg/kg/dose',interval:'q6-8h',route:'IV',max:'8 g/day',note:''},
+  {ind:'성인',dose:'1-2 g/dose',interval:'q8-12h',route:'IV',max:'8 g/day',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'최대 20 mg/mL',rate:'20-60분',note:''},
+],
+renal:[
+  {gfr:'CrCl 10-30',label:'중등도 저하',dose:'50% 감량',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'25% 감량',note:''},
+],
+adrs:[
+  {name:'과민반응',sev:'monitor',action:'페니실린 알레르기와 교차반응 거의 없음 (Monobactam 구조)'},
+],
+note:'페니실린/세팔로스포린 알레르기 환자에서 그람음성균 치료 대안. Pseudomonas 효과적.'},
+
+{id:'cefepime',name:'Cefepime',kor:'세페핌 (Maxipime)',cat:'IV',class:'4세대 Cephalosporin',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['febrile_neutropenia','pneumonia','sepsis'],
+doses:[
+  {ind:'1-2개월',dose:'30 mg/kg/dose',interval:'q8h',route:'IV',max:'6 g/day',note:''},
+  {ind:'2개월 이상',dose:'50 mg/kg/dose',interval:'q8h',route:'IV',max:'6 g/day',note:'성인 2g q8h'},
+],
+mix:[
+  {sol:'NS or D5W',conc:'최대 40 mg/mL',rate:'30분',note:''},
+],
+renal:[
+  {gfr:'CrCl >50',label:'정상',dose:'q8h',note:''},
+  {gfr:'CrCl 10-50',label:'저하',dose:'q12-24h',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'50% 용량 q24h',note:''},
+],
+adrs:[
+  {name:'Neurotoxicity (신부전+고용량)',sev:'serious',action:'신기능 저하 시 용량 조정 필수. 경련, 혼동, myoclonus 모니터링'},
+  {name:'과민반응',sev:'monitor',action:'세팔로스포린계 알레르기 확인'},
+],
+note:'Pseudomonas 포함 그람음성균에 효과. Febrile neutropenia 1차 선택.'},
+
+{id:'colistin',name:'Colistin (Colistimethate)',kor:'콜리스틴',cat:'IV',class:'Polymyxin',ctag:'misc',icon:'🔴',ibg:'var(--red-50)',renal:true,
+indications:['sepsis'],
+doses:[
+  {ind:'소아',dose:'2.5-5 mg/kg/day (CBA 기준)',interval:'÷ q6-8h',route:'IV/IM',max:'5 mg/kg/day',note:''},
+],
+mix:[
+  {sol:'재구성: 1vial + WFI 2mL (75mg/mL) → NS or D5W 100mL',conc:'-',rate:'느린 점적',note:'단백제재 - 거품 생기지 않게 부드럽게 혼합'},
+],
+renal:[
+  {gfr:'신기능 저하',label:'반드시 조정',dose:'CrCl에 따른 용량 조정 필수',note:'신독성 위험 높음'},
+],
+adrs:[
+  {name:'신독성 (높은 빈도)',sev:'serious',action:'SCr 매일 모니터링. 수분 공급 충분히'},
+  {name:'신경독성',sev:'serious',action:'얼굴 감각 이상, 현기증 모니터링'},
+],
+note:'MDR Acinetobacter, Pseudomonas 최후 수단. 신독성 높음. 반드시 전문가 상담 후 사용.'},
+
+{id:'linezolid',name:'Linezolid',kor:'리네졸리드',cat:'IV',class:'Oxazolidinone',ctag:'macro',icon:'🟢',ibg:'var(--green-50)',renal:false,
+indications:['ssti','pneumonia','sepsis'],
+doses:[
+  {ind:'소아 ≤11세',dose:'10 mg/kg/dose',interval:'q8h',route:'IV/PO',max:'600 mg/dose',note:'경구 생체이용률 100%'},
+  {ind:'소아 ≥12세',dose:'600 mg/dose',interval:'q12h',route:'IV/PO',max:'600 mg/dose',note:''},
+  {ind:'VRE 감염',dose:'10 mg/kg q8h (<12세) / 600mg q12h (≥12세)',interval:'-',route:'IV/PO',max:'600 mg/dose',note:'14-28일 투여'},
+  {ind:'MRSA 폐렴',dose:'10 mg/kg q8h (<12세) / 600mg q12h (≥12세)',interval:'-',route:'IV',max:'600 mg/dose',note:'10-14일'},
+],
+mix:[
+  {sol:'Ready-to-use bag (2 mg/mL)',conc:'2 mg/mL',rate:'30-120분',note:'추가 희석 불필요. 차광 불필요'},
+],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요. 대사산물 축적 가능하나 임상적 의미 불명확',note:''},
+],
+adrs:[
+  {name:'혈소판 감소증/골수억제',sev:'serious',action:'매주 CBC. 2주 이상 시 위험 증가. PLT <100K 시 투여 중단 고려'},
+  {name:'Serotonin syndrome',sev:'serious',action:'SSRI, SNRI, MAO 억제제와 병용 금기. 고열, 진전, 흥분 시 즉시 중단'},
+  {name:'시신경염',sev:'serious',action:'장기 투여(>1개월) 시 정기 시력검사. 비가역적 손상 가능'},
+  {name:'젖산산증',sev:'serious',action:'구역, 복통, 젖산 수치 모니터링'},
+],
+note:'MRSA, VRE 감염의 주요 대안. 경구 생체이용률 100% → IV→PO 전환 가능. 보험: VRE 증명, 또는 Vancomycin/Teicoplanin 실패/알레르기 시.'},
+
+{id:'ertapenem',name:'Ertapenem',kor:'에르타페넴',cat:'IV',class:'Carbapenem',ctag:'carbap',icon:'🟠',ibg:'var(--coral-50)',renal:true,
+indications:['intraabdominal','uti'],
+doses:[
+  {ind:'3개월-12세',dose:'15 mg/kg/dose',interval:'q12h',route:'IV',max:'1 g/day',note:''},
+  {ind:'13세 이상',dose:'1 g',interval:'q24h',route:'IV',max:'1 g/day',note:''},
+],
+mix:[
+  {sol:'NS',conc:'최대 20 mg/mL',rate:'30분',note:''},
+],
+renal:[
+  {gfr:'CrCl <30',label:'중증 저하',dose:'0.5 g q24h (성인)',note:'소아 데이터 제한적'},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+  {name:'경련',sev:'monitor',action:'Meropenem보다 적음'},
+],
+note:'지역사회 획득 복강내 감염 단독 요법 가능. Pseudomonas, MRSA에 비효과적. q24h 1회 투여 장점.'},
+
+{id:'ciprofloxacin_iv',name:'Ciprofloxacin (IV)',kor:'시프로플록사신 IV',cat:'IV',class:'Fluoroquinolone',ctag:'misc',icon:'⚠️',ibg:'var(--amber-50)',renal:true,
+indications:['uti','sepsis'],
+doses:[
+  {ind:'소아 IV (이식 포함)',dose:'20-30 mg/kg/day',interval:'÷ q12h (10-15mg/kg/dose)',route:'IV',max:'IV 800mg/day',note:'이식 시 8mg/kg q12h'},
+  {ind:'성인 IV',dose:'200-400 mg/dose',interval:'q12h',route:'IV',max:'800 mg/day',note:''},
+],
+mix:[
+  {sol:'희석 완료 제재',conc:'최대 2 mg/mL',rate:'60분',note:'수액오더 불필요'},
+],
+renal:[
+  {gfr:'CrCl 30-50',label:'경도 저하',dose:'250-500mg q12h PO',note:''},
+  {gfr:'CrCl <30',label:'중증 저하',dose:'250-500mg q18h PO',note:'IV: 400mg q24h'},
+],
+adrs:[
+  {name:'소아 관절/연골 독성',sev:'serious',action:'소아, 18세 미만 성장 중인 청소년 투여 금기 (정제, 주사제 모두 비보험)'},
+  {name:'QT 연장',sev:'serious',action:'QT 연장 약물 병용 주의'},
+  {name:'건염/건 파열',sev:'monitor',action:'관절 통증 모니터링'},
+],
+note:'⚠️ 소아 비보험 (이식 환자 예외). 18세 미만 성장 중인 청소년 투여 시 주의. 이식 시 보험 가능.'},
+
+// ===================== ORAL ANTIBIOTICS =====================
+{id:'amoxicillin',name:'Amoxicillin',kor:'아목시실린',cat:'PO',class:'페니실린계 (경구)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['pneumonia','uti','ssti'],
+doses:[
+  {ind:'일반 감염 (소아)',dose:'10-15 mg/kg/dose',interval:'TID',route:'PO',max:'500 mg/dose',note:''},
+  {ind:'중이염/부비동염/폐렴',dose:'30 mg/kg/dose',interval:'TID',route:'PO',max:'1 g/dose',note:'고용량'},
+  {ind:'Asplenia/cGVHD 예방 (3개월-5세)',dose:'10 mg/kg/dose',interval:'BID',route:'PO',max:'-',note:'SNUBH 감염예방 프로토콜'},
+  {ind:'Asplenia 예방 (>5세)',dose:'250 mg/dose',interval:'BID',route:'PO',max:'500 mg BID',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl 10-30',label:'중등도 저하',dose:'q12h',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'q24h',note:''},
+],
+adrs:[
+  {name:'과민반응',sev:'monitor',action:'페니실린 알레르기 확인'},
+  {name:'위장관 부작용',sev:'common',action:'식사와 함께 투여'},
+],
+note:''},
+
+{id:'amoxicillin_clav',name:'Amoxicillin-Clavulanate',kor:'아목시실린-클라불라네이트 (오구멘틴)',cat:'PO',class:'BL/BLI (경구)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['ssti','pneumonia','intraabdominal'],
+doses:[
+  {ind:'경증 감염 (7:1 제형)',dose:'20 mg/kg/dose (아목시실린 기준)',interval:'BID',route:'PO',max:'875 mg (아목시실린)/dose',note:'= 22.85 mg amox/kg BID'},
+  {ind:'중등도-중증 (7:1 제형)',dose:'45 mg/kg/day',interval:'BID',route:'PO',max:'875 mg/dose',note:'= 51.5 mg amox/kg BID'},
+  {ind:'시럽 (7:1)',dose:'0.5 cc/kg/dose',interval:'BID',route:'PO',max:'1.2 cc/kg/dose',note:''},
+  {ind:'중이염/부비동염/폐렴 (14:1 고용량)',dose:'45 mg/kg/day',interval:'BID',route:'PO',max:'875 mg/dose',note:'= 51.5 mg amox/kg/day'},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl 10-30',label:'중등도 저하',dose:'q12h',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'q24h',note:''},
+],
+adrs:[
+  {name:'위장관 부작용 (흔함)',sev:'common',action:'식사와 함께 투여 필수. Clavulanate로 인해 설사 빈도 높음'},
+  {name:'과민반응',sev:'monitor',action:'페니실린 알레르기 확인'},
+],
+note:'β-lactamase 생성균 (MRSA 제외) 포함 피부/연조직, 중이염, 폐렴. 제형 주의: 7:1 vs 14:1'},
+
+{id:'cefixime',name:'Cefixime',kor:'세픽심 (Suprax)',cat:'PO',class:'3세대 Cephalosporin (경구)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['uti','pneumonia'],
+doses:[
+  {ind:'소아 (일반)',dose:'4 mg/kg/dose',interval:'BID',route:'PO',max:'200 mg/dose',note:'산제: 1.5-3 mg/kg BID ~ 6 mg/kg BID'},
+  {ind:'Irinotecan 설사 예방',dose:'8 mg/kg/dose',interval:'QD',route:'PO',max:'400 mg/day',note:'Irinotecan 투여일부터 종료일까지'},
+  {ind:'성인',dose:'50-200 mg',interval:'BID',route:'PO',max:'400 mg/day',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl 21-60',label:'경도 저하',dose:'75% 용량',note:''},
+  {gfr:'CrCl <20',label:'중증 저하',dose:'50% 용량',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+],
+note:'경구용 3세대 세팔로스포린. UTI, 폐렴에 사용.'},
+
+{id:'cefpodoxime',name:'Cefpodoxime',kor:'세프포독심 (Banan)',cat:'PO',class:'3세대 Cephalosporin (경구)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['uti','pneumonia'],
+doses:[
+  {ind:'소아',dose:'1 Tab/10kg/day 또는 1cc/kg/day',interval:'BID',route:'PO',max:'800 mg/day',note:'Non-neutropenic fever 환자에서 사용'},
+  {ind:'성인',dose:'100-200 mg',interval:'BID',route:'PO',max:'400 mg/day',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl <30',label:'중등도 저하',dose:'q24h',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'식사와 함께'},
+],
+note:'Non-neutropenic fever 환자 외래 관리에 사용 (SNUBH).'},
+
+{id:'cefdinir',name:'Cefdinir',kor:'세프디니르 (Omnicef)',cat:'PO',class:'3세대 Cephalosporin (경구)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['uti','ssti','pneumonia'],
+doses:[
+  {ind:'소아',dose:'5 mg/kg/dose (3-6 mg/kg/dose)',interval:'q8h',route:'PO',max:'600 mg/day',note:'성인: 100mg q8h'},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl <30',label:'중증 저하',dose:'소아 7mg/kg q24h (max 300mg/day)',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+],
+note:''},
+
+{id:'cefditoren',name:'Cefditoren',kor:'세프디토렌 (Meiact)',cat:'PO',class:'3세대 Cephalosporin (경구)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['ssti','pneumonia'],
+doses:[
+  {ind:'소아',dose:'3 mg/kg/dose',interval:'q8h',route:'PO',max:'600 mg/day',note:'5mg 단위로 처방! 성인: 100mg q8h'},
+  {ind:'중증 감염',dose:'6 mg/kg/dose',interval:'q8h',route:'PO',max:'600 mg/day',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl 30-49',label:'경도 저하',dose:'max 200mg BID',note:''},
+  {gfr:'CrCl <30',label:'중증 저하',dose:'200mg q24h',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'증상 모니터링'},
+],
+note:'5mg 단위 처방 주의 (SNUBH). 치과 시술 전 예방적 항생제로 3일분 처방.'},
+
+{id:'azithromycin_po',name:'Azithromycin',kor:'아지스로마이신',cat:'PO',class:'Macrolide (경구/IV)',ctag:'macro',icon:'🟢',ibg:'var(--green-50)',renal:false,
+indications:['pneumonia','mycoplasma'],
+doses:[
+  {ind:'CAP / Mycoplasma (1일차, PO)',dose:'10 mg/kg/dose',interval:'QD',route:'PO',max:'500 mg',note:'Day 1'},
+  {ind:'CAP / Mycoplasma (2-5일차, PO)',dose:'5 mg/kg/dose',interval:'QD',route:'PO',max:'250 mg',note:'Day 2-5 (5일 요법)'},
+  {ind:'CAP (IV)',dose:'10 mg/kg/day',interval:'QD',route:'IV',max:'500 mg/day',note:'IV: 1시간 이상 천천히'},
+  {ind:'Pertussis 예방/치료',dose:'10 mg/kg D1 → 5 mg/kg D2-5',interval:'QD',route:'PO',max:'500→250 mg',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'1mg/mL (3시간) / 2mg/mL (1시간)',rate:'최소 60분 이상',note:'60분 미만 주입 시 혈전정맥염 위험'},
+],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'담즙 배설이 주 경로',note:'중증 간기능 장애 시 주의'},
+],
+adrs:[
+  {name:'QT 연장/심부정맥',sev:'serious',action:'QT 연장 약물 병용 주의. ECG 모니터링 (고위험군)'},
+  {name:'위장관 부작용',sev:'common',action:'식사와 함께'},
+  {name:'유문협착 (1개월 미만)',sev:'serious',action:'1개월 미만 경구 투여 시 보호자 교육. 증상 모니터링'},
+],
+note:'Mycoplasma MSMP 1차 선택. MRMP (macrolide 내성)에는 효과 없음 → Doxycycline 전환.'},
+
+{id:'clarithromycin',name:'Clarithromycin',kor:'클라리스로마이신',cat:'PO',class:'Macrolide (경구)',ctag:'macro',icon:'🟢',ibg:'var(--green-50)',renal:false,
+indications:['pneumonia','mycoplasma'],
+doses:[
+  {ind:'소아',dose:'7.5 mg/kg/dose',interval:'BID',route:'PO',max:'500 mg/dose',note:'Mycoplasma MSMP 1차 선택 (SNUBH)'},
+  {ind:'성인',dose:'250-500 mg',interval:'BID',route:'PO',max:'1 g/day',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl <30',label:'중등도 저하',dose:'50% 감량 또는 투여 간격 2배',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'식사와 함께'},
+  {name:'QT 연장',sev:'monitor',action:'QT 연장 약물 병용 주의'},
+  {name:'약물 상호작용 (CYP3A4)',sev:'serious',action:'Cyclosporine, tacrolimus, warfarin 농도 증가. TDM 필수'},
+],
+note:'SNUBH Mycoplasma 가이드: MSMP 1차 선택. 24시간 내 반응 없으면 Doxycycline 전환 고려.'},
+
+{id:'doxycycline',name:'Doxycycline',kor:'독시사이클린',cat:'PO',class:'Tetracycline (경구)',ctag:'misc',icon:'🔶',ibg:'var(--amber-50)',renal:false,
+indications:['pneumonia','mycoplasma'],
+doses:[
+  {ind:'소아 (8세 이상)',dose:'2 mg/kg/dose',interval:'BID',route:'PO',max:'100 mg/dose',note:'8세 미만 사용 금기 (치아 착색)'},
+  {ind:'성인',dose:'100 mg',interval:'BID',route:'PO',max:'200 mg/day',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요',note:''},
+],
+adrs:[
+  {name:'치아 착색 (8세 미만)',sev:'serious',action:'8세 미만 사용 절대 금기'},
+  {name:'광과민성',sev:'monitor',action:'햇빛 노출 주의. 자외선 차단'},
+  {name:'식도 자극',sev:'monitor',action:'충분한 물과 함께 직립자세로 복용'},
+],
+note:'MRMP (macrolide 내성 Mycoplasma) 1차 선택. 8세 이상에서만 사용.'},
+
+{id:'trimethoprim_sulfa',name:'TMP-SMX (Bactrim/Septrin)',kor:'코트리목사졸',cat:'PO',class:'Sulfonamide+Folate Antagonist',ctag:'misc',icon:'🟡',ibg:'var(--amber-50)',renal:true,
+indications:['uti','ssti','pneumonia'],
+doses:[
+  {ind:'UTI 치료 (≥2개월)',dose:'8-10 mg/kg/day (TMP 기준)',interval:'÷ BID (= 4-5 TMP mg/kg BID)',route:'PO',max:'320 mg TMP/day',note:'7-10일'},
+  {ind:'UTI 예방',dose:'1-2 mg/kg/day (TMP)',interval:'QD 취침 전',route:'PO',max:'160 mg TMP/day',note:'장기 예방'},
+  {ind:'CA-MRSA SSTI',dose:'4-6 TMP mg/kg BID',interval:'BID',route:'PO',max:'320 mg TMP/day',note:''},
+  {ind:'PCP 치료 (IV/PO)',dose:'15-20 mg/kg/day (TMP)',interval:'÷ q6-8h',route:'IV/PO',max:'320 mg TMP/dose',note:'21일. IV: 90-120 mg(SMX+TMP)/kg/day'},
+  {ind:'PCP 예방 (경구)',dose:'1T/10kg/day (PO) 또는 5mg/kg TMP/day',interval:'3일/주 (금토일)',route:'PO',max:'5T/day',note:''},
+  {ind:'GI(-) 균혈증 (IV)',dose:'6 TMP mg/kg BID',interval:'BID',route:'IV',max:'-',note:''},
+],
+mix:[
+  {sol:'D5W (D5W 권장)',conc:'1amp(5mL) + D5W 125mL (4시간 이내)',rate:'60-90분 (bolus 금기)',note:'수분 제한: D5W 75mL (2시간 이내). D5W 100mL (4시간 이내). 냉장 보관 안 함'},
+],
+renal:[
+  {gfr:'CrCl 15-30',label:'중등도 저하',dose:'50% 감량',note:''},
+  {gfr:'CrCl <15',label:'중증 저하',dose:'사용 금지 권고',note:'불가피 시 수준 모니터링'},
+  {gfr:'HD',label:'혈액투석',dose:'투석 후 50% 보충',note:''},
+],
+adrs:[
+  {name:'고칼륨혈증',sev:'serious',action:'특히 신부전 환자, 칼륨 모니터링'},
+  {name:'Stevens-Johnson syndrome',sev:'serious',action:'점막 침범, 수포 발진 시 즉시 중단 및 입원'},
+  {name:'골수억제 (엽산 결핍)',sev:'monitor',action:'장기 투여 시 CBC 모니터링. 엽산 보충 고려'},
+  {name:'MTX 상호작용',sev:'serious',action:'MTX 투여 전후 1일 투여 금지. HD-MTX 전후 SXT 중단'},
+],
+note:'⚠️ ≥2개월 이상에서만 사용. 신생아 금기 (핵황달). PCP 예방: 3일/주 (금토일). MTX 예정 시 MTX 전날~다음날 복용 금지.'},
+
+{id:'metronidazole_po',name:'Metronidazole (경구)',kor:'메트로니다졸 (경구)',cat:'PO',class:'Nitroimidazole (경구)',ctag:'misc',icon:'⚫',ibg:'var(--gray-50)',renal:false,
+indications:['intraabdominal'],
+doses:[
+  {ind:'소아',dose:'10 mg/kg/dose',interval:'TID',route:'PO',max:'500 mg/dose',note:'C.difficile: <2세 7.5mg/kg QID, ≥2세 7.5mg/kg TID or QID'},
+  {ind:'C. difficile 관련 설사',dose:'7.5 mg/kg/dose (아래 참조)',interval:'QID or TID',route:'PO',max:'500 mg/dose',note:'<2세: 7.5mg/kg QID; ≥2세: 7.5mg/kg TID or QID'},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl <10',label:'중증 저하',dose:'50% 감량',note:''},
+],
+adrs:[
+  {name:'위장관 부작용, 금속성 맛',sev:'common',action:'식사와 함께'},
+  {name:'Disulfiram 반응',sev:'monitor',action:'알코올 섭취 금지'},
+],
+note:'혐기성균 감염, C. difficile 대장염.'},
+
+{id:'nitrofurantoin',name:'Nitrofurantoin',kor:'니트로푸란토인',cat:'PO',class:'Nitrofuran (경구)',ctag:'misc',icon:'🟡',ibg:'var(--amber-50)',renal:true,
+indications:['uti'],
+doses:[
+  {ind:'소아 UTI 치료',dose:'1.3-1.8 mg/kg/dose',interval:'QID',route:'PO',max:'100 mg/dose',note:'7일'},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl <45',label:'금기',dose:'사용 금기 (약물 축적, 효과 감소)',note:''},
+],
+adrs:[
+  {name:'폐독성',sev:'serious',action:'장기 투여 시 폐 기능 모니터링'},
+  {name:'위장관 부작용',sev:'common',action:'식사와 함께 복용'},
+],
+note:'단순 하부 UTI에 효과적. 신우신염 또는 신기능 저하 시 사용 금기. G6PD 결핍 주의.'},
+
+{id:'roxithromycin',name:'Roxithromycin',kor:'록시스로마이신 (Rulid)',cat:'PO',class:'Macrolide (경구)',ctag:'macro',icon:'🟢',ibg:'var(--green-50)',renal:false,
+indications:['pneumonia','mycoplasma'],
+doses:[
+  {ind:'소아',dose:'5-8 mg/kg/day',interval:'BID',route:'PO',max:'300 mg/day',note:'6-11kg: 0.5T BID, 12-23kg: 1T BID, 24-40kg: 2T BID'},
+  {ind:'성인',dose:'150 mg/dose',interval:'BID',route:'PO',max:'300 mg/day',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'간 대사',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'식사와 함께'},
+  {name:'QT 연장',sev:'monitor',action:'심장 질환자 주의'},
+],
+note:'보험: 기관지염, 폐렴, 인두염, 부비동염 7-14일.'},
+
+// ===================== ANTIVIRALS =====================
+{id:'acyclovir',name:'Acyclovir',kor:'아시클로버',cat:'AV',class:'항바이러스 (Herpes)',ctag:'misc',icon:'💊',ibg:'var(--pink-50)',renal:true,
+indications:[],
+doses:[
+  {ind:'신생아 HSV CNS 감염',dose:'20 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:'21일 치료'},
+  {ind:'신생아 HSV 피부/점막',dose:'20 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:'14일 치료'},
+  {ind:'수두/단순포진 (소아, PO)',dose:'20 mg/kg/dose',interval:'QID',route:'PO',max:'800 mg/dose',note:'5일 (발열 시 IV 권장)'},
+  {ind:'조혈모세포이식 (IV)',dose:'500 mg/m² (보험용량: 15mg/kg/day)',interval:'q8h',route:'IV',max:'IV 20mg/kg q8h',note:'D0~D30 → PO로 전환 (CD4≥100, D100 이후)'},
+  {ind:'VZV/Shingles (PO)',dose:'20 mg/kg/dose (소아) / 성인: 800mg 5×/day',interval:'-',route:'PO',max:'800 mg/dose',note:'7-10일'},
+],
+mix:[
+  {sol:'NS (only)',conc:'최대 0.5% w/v (5mg/mL)',rate:'1시간 이상',note:'TPN side 투여 금지. NS만 사용 (D5W 침전 위험)'},
+],
+renal:[
+  {gfr:'CrCl 25-50',label:'경도 저하',dose:'IV: q12h',note:''},
+  {gfr:'CrCl 10-25',label:'중등도 저하',dose:'IV: q24h',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'IV: 50% 용량 q24h',note:'PO: 200mg q12h (표준) / 800mg q12h (고용량)'},
+],
+adrs:[
+  {name:'신독성 (결정뇨)',sev:'serious',action:'충분한 수분 공급. SCr 모니터링. 빠른 주입 시 위험 증가'},
+  {name:'신경독성',sev:'monitor',action:'고용량, 신기능 저하 시 경련, 혼동 가능'},
+],
+note:'TPN side 투여 금지. 보험: 조혈모세포이식 IV 4주 15mg/kg/day, PO 3개월 800mg/day.'},
+
+{id:'oseltamivir',name:'Oseltamivir',kor:'오셀타미비르 (타미플루)',cat:'AV',class:'항바이러스 (Influenza)',ctag:'misc',icon:'💊',ibg:'var(--pink-50)',renal:true,
+indications:['covid'],
+doses:[
+  {ind:'소아 <1세',dose:'3 mg/kg/dose',interval:'BID',route:'PO',max:'-',note:'5일'},
+  {ind:'소아 1세이상, ≤15kg',dose:'30 mg/dose',interval:'BID',route:'PO',max:'-',note:'5일'},
+  {ind:'소아 >15-23kg',dose:'45 mg/dose',interval:'BID',route:'PO',max:'-',note:'5일'},
+  {ind:'소아 >23-40kg',dose:'60 mg/dose',interval:'BID',route:'PO',max:'-',note:'5일'},
+  {ind:'소아 >40kg',dose:'75 mg/dose',interval:'BID',route:'PO',max:'-',note:'5일'},
+],
+mix:[],
+renal:[
+  {gfr:'CrCl 10-30',label:'중등도 저하',dose:'30mg QD (치료), 30mg QOD (예방)',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'데이터 제한. 신중히 사용',note:''},
+],
+adrs:[
+  {name:'위장관 부작용 (구역, 구토)',sev:'common',action:'식사와 함께 복용'},
+  {name:'신경정신과적 부작용',sev:'monitor',action:'특히 소아에서 환각, 이상행동 모니터링'},
+],
+note:'인플루엔자 치료/예방. 증상 발현 48시간 이내 투여 시 효과 최대.'},
+
+{id:'peramivir',name:'Peramivir',kor:'페라미비르 (라피악타)',cat:'AV',class:'항바이러스 (Influenza, IV)',ctag:'misc',icon:'💊',ibg:'var(--pink-50)',renal:true,
+indications:[],
+doses:[
+  {ind:'소아 경증 (단회 IV)',dose:'12 mg/kg',interval:'1회',route:'IV',max:'600 mg',note:'5-10일 지속 가능'},
+  {ind:'소아 중증',dose:'12 mg/kg IV q24h',interval:'q24h',route:'IV',max:'600 mg',note:'5-10일 (600mg)'},
+  {ind:'6개월-5세 중증',dose:'12 mg/kg IV q24h',interval:'q24h',route:'IV',max:'600 mg',note:'5-10일'},
+  {ind:'≥6세 중증',dose:'10 mg/kg IV q24h',interval:'q24h',route:'IV',max:'600 mg',note:'5-10일 (600mg)'},
+],
+mix:[
+  {sol:'NS',conc:'-',rate:'30분 이상',note:''},
+],
+renal:[
+  {gfr:'신기능 저하',label:'용량 조정 필요',dose:'CrCl 기반 조정',note:'Micromedex 참고'},
+],
+adrs:[
+  {name:'설사, 위장관 부작용',sev:'common',action:'증상 모니터링'},
+],
+note:'인플루엔자 중증 또는 경구 투여 불가 시 IV 선택. 단회 투여 가능.'},
+
+{id:'remdesivir',name:'Remdesivir',kor:'렘데시비르',cat:'AV',class:'항바이러스 (COVID-19)',ctag:'misc',icon:'🔴',ibg:'var(--red-50)',renal:true,
+indications:['covid'],
+doses:[
+  {ind:'소아 <40kg (>28일, ≥3kg)',dose:'5 mg/kg Day 1 (loading) → 2.5 mg/kg q24h',interval:'-',route:'IV',max:'-',note:'증상 발현 7일 이내. 5일 (최대 10일)'},
+  {ind:'소아/성인 ≥40kg',dose:'200 mg Day 1 → 100 mg q24h',interval:'-',route:'IV',max:'-',note:'5일 (최대 10일)'},
+],
+mix:[
+  {sol:'NS',conc:'-',rate:'30-120분',note:''},
+],
+renal:[
+  {gfr:'eGFR <30',label:'금기',dose:'eGFR <30 mL/min/1.73m²: Remdesivir D/C',note:''},
+],
+adrs:[
+  {name:'AST/ALT 상승 (2-10%)',sev:'monitor',action:'ALT >400: 즉시 중단'},
+  {name:'구역, ARDS (2-10%)',sev:'monitor',action:'증상 모니터링'},
+  {name:'빈혈, AKI (1-10%)',sev:'monitor',action:'CBC, SCr 모니터링'},
+],
+note:'SNUBH COVID-19 프로토콜: 중등-중증 (SpO2<94% 또는 O2 보충 필요 시). 증상 발현 7일 이내 투여. eGFR<30 금기.'},
+];
+
+const INDICATIONS = {
+uti:{label:'UTI (요로감염)',desc:'단순 UTI, 신우신염, 예방 요법 — SNUBH 기준: 3세대 세팔로스포린 1차',drugs:[
+  {id:'cefixime',note:'경증-중등도 UTI 경구 1차 (SNUBH)',first:true},
+  {id:'cefpodoxime',note:'경증 UTI 경구 1차 대안 (SNUBH)',first:true},
+  {id:'cefotaxime',note:'중증 UTI / 신우신염 / neonatal IV 1차',first:true},
+  {id:'amoxicillin',note:'신생아 경험적 치료 (gentamicin 병용, 감수성 확인 필요)'},
+  {id:'gentamicin',note:'신생아 경험적 치료 (ampicillin 병용)'},
+  {id:'trimethoprim_sulfa',note:'감수성 확인 후 예방 요법으로 사용 (국내 내성률 높아 경험적 1차 부적합)'},
+  {id:'nitrofurantoin',note:'단순 하부 UTI (방광염) 한정. 신우신염 및 신기능 저하 시 금기'},
+]},
+sepsis:{label:'Neonatal Sepsis',desc:'신생아 패혈증 EOS/LOS',drugs:[
+  {id:'ampicillin',note:'EOS 1차 선택 (Gentamicin 병용)',first:true},
+  {id:'gentamicin',note:'EOS 1차 선택 (Ampicillin 병용)',first:true},
+  {id:'ubactam',note:'Ampicillin-Sulbactam: 광범위 경험적 치료 대안'},
+  {id:'cefotaxime',note:'그람음성균/수막염 병발 의심 시'},
+  {id:'vancomycin',note:'MRSA/CoNS 의심 LOS, 카테터 관련'},
+  {id:'meropenem',note:'ESBL/다제내성균 의심, 치료 실패'},
+]},
+pneumonia:{label:'폐렴 (Pneumonia)',desc:'CAP, 비정형 폐렴, 원내 폐렴',drugs:[
+  {id:'ampicillin',note:'입원 CAP, S. pneumoniae (경구)',first:true},
+  {id:'ubactam',note:'흡인성 폐렴, β-lactamase 생성균 포함 CAP'},
+  {id:'cefotaxime',note:'입원 CAP, 중등도 이상 (IV)'},
+  {id:'azithromycin_po',note:'Mycoplasma MSMP 포함 비정형 폐렴',first:true},
+  {id:'clarithromycin',note:'Mycoplasma MSMP 1차 (SNUBH)'},
+  {id:'doxycycline',note:'Mycoplasma MRMP (macrolide 내성, 8세 이상)'},
+  {id:'cefepime',note:'Pseudomonas 의심 (면역억제, CF)'},
+  {id:'meropenem',note:'중증/ESBL 의심 원내 폐렴'},
+  {id:'vancomycin',note:'MRSA 폐렴 의심 (괴사성)'},
+  {id:'linezolid',note:'MRSA 폐렴 대안 (vancomycin 실패/독성)'},
+]},
+mycoplasma:{label:'Mycoplasma 폐렴',desc:'SNUBH 소아 응급실 프로토콜 (Updated Aug 2024)',drugs:[
+  {id:'clarithromycin',note:'MSMP 1차: 7.5mg/kg/dose BID (max 500mg)',first:true},
+  {id:'azithromycin_po',note:'MSMP 대안: 10mg/kg D1 → 5mg/kg D2-5'},
+  {id:'doxycycline',note:'MRMP 1차: 2mg/kg/dose BID (max 100mg, ≥8세)',first:true},
+  {id:'roxithromycin',note:'MSMP 대안 (경증)'},
+],extra:`<div class="proto-grid">
+<div class="proto-card low"><h4 style="color:var(--teal-600)">Low risk group (외래 관리)</h4><ul>
+<li>마크로라이드 감수성 의심</li><li>체온: 영아 <50bpm, 1-5세 <40, >5세 <20 bpm</li>
+<li>식욕 저하 없음, 호흡곤란 없음</li><li>SpO2 >95%</li>
+<li>흉부 X-ray <10mm, 흉막 삼출 없음</li></ul>
+<div class="nbox" style="margin-top:8px;font-size:11px;">→ Clarithromycin 7.5mg/kg BID (max 500mg) 또는 Azithromycin<br>24시간 내 반응 없으면 Doxycycline 전환</div></div>
+<div class="proto-card high"><h4 style="color:var(--red-600)">High risk / MRMP 의심</h4><ul>
+<li>Macrolide 치료 2-3일 후 발열 지속</li><li>입원 치료 필요</li>
+<li>SpO2 <95%</li><li>흉막 삼출, 무기폐</li></ul>
+<div class="rbox" style="margin-top:8px;font-size:11px;">→ Doxycycline 2mg/kg BID (max 100mg, ≥8세)<br>입원 시 Chest X-ray + Atypical pneumonia PCR<br>Mycoplasma IgM, Respiratory PCR (153)</div></div></div>`},
+meningitis:{label:'세균성 수막염',desc:'신생아 및 소아 세균성 수막염',drugs:[
+  {id:'ampicillin',note:'신생아 경험적 치료 + Cefotaxime 병용',first:true},
+  {id:'ubactam',note:'Ampicillin-Sulbactam: 영아/소아 경험적 치료 (ampicillin 대안)'},
+  {id:'cefotaxime',note:'신생아 수막염 1차 (Ampicillin 병용)',first:true},
+  {id:'vancomycin',note:'PCN 내성 S. pneumoniae 의심 시 추가 (β-lactam에 병용)'},
+  {id:'meropenem',note:'PCN/Cephalosporin 알레르기, 내성균'},
+]},
+ssti:{label:'피부/연조직 감염 (SSTI)',desc:'Cellulitis, abscess, 괴사성 근막염',drugs:[
+  {id:'cefazolin',note:'MSSA cellulitis 1차 (IV)',first:true},
+  {id:'ubactam',note:'β-lactamase 생성균 포함 피부/연조직 감염'},
+  {id:'amoxicillin_clav',note:'β-lactamase 생성균 포함 피부 감염 (경구)',first:true},
+  {id:'vancomycin',note:'중증 MRSA SSTI, 균혈증 병발 시'},
+  {id:'linezolid',note:'MRSA SSTI 대안, IV→PO 전환 가능'},
+  {id:'trimethoprim_sulfa',note:'CA-MRSA SSTI 경구 대안'},
+  {id:'piperacillin_tazo',note:'혼합/괴사성 감염 (광범위)'},
+]},
+intraabdominal:{label:'복강내 감염',desc:'복막염, 충수돌기염, 복강내 농양',drugs:[
+  {id:'piperacillin_tazo',note:'중등도-중증 복강내 감염 1차',first:true},
+  {id:'ubactam',note:'경증-중등도 복강내 감염 (혐기성 포함)'},
+  {id:'metronidazole',note:'혐기성균 포함 복강내 감염 (병용)',first:true},
+  {id:'meropenem',note:'중증, ESBL 의심, 치료 실패'},
+  {id:'ertapenem',note:'지역사회 획득 복잡성 복강내 감염 단독요법'},
+  {id:'cefazolin',note:'경증, 수술 예방적 목적 (혐기성 병용 필요)'},
+]},
+covid:{label:'COVID-19 (SNUBH 프로토콜)',desc:'Updated Dec 2024 - SNUBH PED ASP',drugs:[
+  {id:'remdesivir',note:'중등-중증: SpO2 <94% 또는 O2 보충 필요 시',first:true},
+  {id:'oseltamivir',note:'인플루엔자 동반 시'},
+],extra:`<div class="sc ok" style="margin-bottom:14px;">
+<h3><i class="fa-solid fa-virus" style="color:var(--teal-400);"></i> COVID-19 입원 환자 관리 프로토콜</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:12px;">
+<div><strong>Mild-Moderate (O2 불필요)</strong><br>
+<ul style="margin-top:4px;padding-left:16px;color:var(--text-muted);">
+<li>Close monitoring</li>
+<li>Fluid, electrolyte support</li>
+<li>발열: AAP, NSAID</li>
+<li>일반적으로 steroid, remdesivir 불필요</li></ul></div>
+<div><strong>Severe (SpO2 <94%, O2 필요 또는 MV)</strong><br>
+<ul style="margin-top:4px;padding-left:16px;color:var(--text-muted);">
+<li><strong>Dexamethasone</strong>: 0.15mg/kg IV QD (max 6mg/d), 최대 10일 또는 퇴원까지</li>
+<li><strong>Remdesivir</strong>: 증상 발현 7일 이내, 기저질환 있는 Bwt >40kg<br>또는 ≥28일, ≥3kg 소아</li></ul></div></div>
+<div class="wbox"><strong>Remdesivir 금기:</strong> (1) ALT >200 또는 중증 간기능 장애, (2) eGFR <30 mL/min<br>
+<strong>기저질환:</strong> 비만(BMI>30), 당뇨, 면역저하, 심폐질환, 신경발달장애</div></div>`},
+febrile_neutropenia:{label:'발열성 호중구 감소증',desc:'Febrile Neutropenia (혈액종양 분과)',drugs:[
+  {id:'cefepime',note:'1차 단독 요법 (ANC <500, 비복잡성)',first:true},
+  {id:'piperacillin_tazo',note:'복잡성 febrile neutropenia 1차',first:true},
+  {id:'meropenem',note:'중증, 패혈증 쇼크, 이전 ESBL'},
+  {id:'vancomycin',note:'MRSA 고위험, 카테터 감염, 피부 감염'},
+  {id:'cefazolin',note:'(예방) 수술 예방적'},
+  {id:'amikacin',note:'그람음성균 균혈증, gentamicin 대안 (TDM 필수)'},
+  {id:'fluconazole',note:'칸디다 예방 (ANC <1000, ALL/Lymphoma 중심)'},
+  {id:'itraconazole',note:'칸디다+아스페르길루스 예방 (AML 중심)'},
+  {id:'caspofungin',note:'경험적 항진균 치료 (발열 지속 시)'},
+  {id:'micafungin',note:'HSCT 칸디다 예방'},
+  {id:'amphotericin_b_lipo',note:'타 항진균제 실패/불가 시. CGD 1차'},
+  {id:'voriconazole',note:'침습성 아스페르길루스증 1차'},
+]},
+antifungal:{label:'항진균제 (Antifungals)',desc:'침습성 진균감염 예방 및 치료',drugs:[
+  {id:'fluconazole',note:'칸디다증 예방/치료 1차 (Azole 감수성)',first:true},
+  {id:'itraconazole',note:'아스페르길루스 예방 (AML). Vincristine 투여 시 주의'},
+  {id:'voriconazole',note:'침습성 아스페르길루스증 1차',first:true},
+  {id:'caspofungin',note:'칸디다증 치료, 경험적 항진균 치료'},
+  {id:'micafungin',note:'HSCT 칸디다 예방 (보험 인정)'},
+  {id:'posaconazole',note:'AML induction, cGVHD 예방 (광범위 Azole)'},
+  {id:'amphotericin_b_lipo',note:'타 약제 실패/내성. CGD 1차'},
+  {id:'nystatin',note:'구강/위장관 칸디다 (국소)'},
+]},
+};
+
+let currentDrug=null, currentWeight='';
+
+function init(){
+  const iv=DRUGS.filter(d=>d.cat==='IV');
+  const po=DRUGS.filter(d=>d.cat==='PO');
+  const av=DRUGS.filter(d=>d.cat==='AV');
+  const af=DRUGS.filter(d=>d.cat==='AF');
+  renderList('ivDrugList',iv);
+  renderList('poDrugList',po);
+  renderList('avDrugList',av);
+  renderList('afDrugList',af);
+}
+
+function renderList(containerId, drugs){
+  const el=document.getElementById(containerId);
+  el.innerHTML='';
+  drugs.forEach(d=>{
+    const div=document.createElement('div');
+    div.className='drug-item'+(currentDrug?.id===d.id?' active':'');
+    div.innerHTML=`<span style="font-size:15px">${d.icon}</span>
+      <div><div class="dn">${d.name}</div><div class="dc">${d.class}</div></div>
+      ${d.renal?'<span class="rbadge">Renal</span>':'<span class="nbadge">Renal-OK</span>'}`;
+    div.onclick=()=>selectDrug(d.id);
+    el.appendChild(div);
+  });
+}
+
+function filterDrugs(q){
+  const lq=q.toLowerCase();
+  const filtered=DRUGS.filter(d=>d.name.toLowerCase().includes(lq)||d.kor.includes(q)||d.class.toLowerCase().includes(lq));
+  document.getElementById('ivDrugList').innerHTML='';
+  document.getElementById('poDrugList').innerHTML='';
+  document.getElementById('avDrugList').innerHTML='';
+  document.getElementById('afDrugList').innerHTML='';
+  filtered.forEach(d=>{
+    const elId=d.cat==='IV'?'ivDrugList':d.cat==='PO'?'poDrugList':d.cat==='AV'?'avDrugList':'afDrugList';
+    const el=document.getElementById(elId);
+    const div=document.createElement('div');
+    div.className='drug-item'+(currentDrug?.id===d.id?' active':'');
+    div.innerHTML=`<span style="font-size:15px">${d.icon}</span>
+      <div><div class="dn">${d.name}</div><div class="dc">${d.class}</div></div>
+      ${d.renal?'<span class="rbadge">Renal</span>':'<span class="nbadge">Renal-OK</span>'}`;
+    div.onclick=()=>selectDrug(d.id);
+    el.appendChild(div);
+  });
+}
+
+function selectDrug(id){
+  currentDrug=DRUGS.find(d=>d.id===id);
+  document.querySelectorAll('.drug-item').forEach(el=>{
+    el.classList.toggle('active', el.querySelector('.dn')?.textContent===currentDrug?.name);
+  });
+  document.getElementById('welcomeScreen').classList.add('hidden');
+  document.getElementById('indicationView').classList.add('hidden');
+  document.getElementById('drugDetailView').classList.remove('hidden');
+  renderDrug(currentDrug);
+}
+
+function showInd(key, btn){
+  document.querySelectorAll('.ind-pill').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const ind=INDICATIONS[key];
+  document.getElementById('welcomeScreen').classList.add('hidden');
+  document.getElementById('drugDetailView').classList.add('hidden');
+  const view=document.getElementById('indicationView');
+  view.classList.remove('hidden');
+  
+  const cards=ind.drugs.map(d=>{
+    const drug=DRUGS.find(x=>x.id===d.id);
+    if(!drug)return'';
+    return`<div class="ind-drug-card" onclick="selectDrug('${drug.id}')">
+      <div class="idc-icon" style="background:${drug.ibg}">${drug.icon}</div>
+      <div><div class="idc-name">${drug.name} <span style="font-weight:400;color:var(--text-muted);font-size:12px;">(${drug.kor})</span>${d.first?'<span class="badge-first">1차 선택</span>':''}</div>
+      <div class="idc-detail">${d.note}</div></div>
+      <i class="fa-solid fa-chevron-right" style="margin-left:auto;color:var(--text-hint);font-size:11px;"></i></div>`;
+  }).join('');
+
+  view.innerHTML=`
+    <div class="calc-card" style="margin-bottom:20px;">
+      <h3><i class="fa-solid fa-calculator" style="margin-right:5px;"></i>체중 기반 용량 계산기</h3>
+      <div class="calc-row">
+        <input class="wt-input" type="number" id="indWeightInput" placeholder="체중 (kg)" min="0.5" max="150" step="0.1" oninput="calcIndDose()" value="${currentWeight}">
+        <span style="font-size:12px;color:var(--text-muted);">체중 입력 시 각 항생제 대표 용량 자동 계산</span>
+      </div>
+      <div id="indDoseResults" style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;"></div>
+    </div>
+    <h2 style="font-size:19px;font-weight:700;margin-bottom:4px;">${ind.label}</h2>
+    <p style="color:var(--text-muted);font-size:12px;margin-bottom:16px;">${ind.desc}</p>
+    ${ind.extra||''}
+    <div id="indCards">${cards}</div>
+    <div class="nbox"><i class="fa-solid fa-circle-info"></i> 항생제 클릭 시 상세 용량·믹스·renal dosing 확인 가능. 기관 항균제 감수성 패턴을 함께 참고하세요.</div>`;
+
+  // store current ind drugs for calc
+  window._currentIndDrugs = ind.drugs.map(d=>DRUGS.find(x=>x.id===d.id)).filter(Boolean);
+  if(currentWeight) calcIndDose();
+}
+
+function renderDrug(drug){
+  const view=document.getElementById('drugDetailView');
+  const sevCls=s=>s==='common'?'sev-c':s==='monitor'?'sev-m':'sev-s';
+  const sevLabel=s=>s==='common'?'흔함':s==='monitor'?'모니터링':'심각';
+  const routeCls=r=>r==='IV'?'beta':r==='PO'?'macro':'amino';
+
+  const doseRows=drug.doses.map(d=>`<tr>
+    <td>${d.ind}</td>
+    <td class="mono">${d.dose}</td>
+    <td class="mono">${d.interval}</td>
+    <td><span class="tag ${routeCls(d.route)}" style="font-size:10px;">${d.route}</span></td>
+    <td class="mono">${d.max||'-'}</td>
+    <td style="font-size:11px;color:var(--text-muted);">${d.note}</td>
+  </tr>`).join('');
+
+  const mixRows=drug.mix.map(m=>`<div class="mix-row">
+    <div>${m.sol}</div><div class="mono">${m.conc}</div>
+    <div class="mono">${m.rate}</div>
+    <div style="font-size:11px;color:var(--text-muted);">${m.note}</div>
+  </div>`).join('');
+
+  const renalRows=drug.renal.map(r=>{
+    let gc='gfr-n';
+    const g=r.gfr.toLowerCase();
+    if(g.includes('crrt')||g.includes('hd')||g.includes('<5')||g.includes('<10')||g.includes('<15')||g.includes('모든')||g.includes('말기'))gc=g.includes('모든')?'gfr-n':'gfr-c';
+    else if(g.includes('<20')||g.includes('<25')||g.includes('<30'))gc='gfr-s';
+    else if(g.includes('20-')||g.includes('10-')||g.includes('15-')||g.includes('25-'))gc='gfr-m';
+    else if(g.includes('26-')||g.includes('30-')||g.includes('40-'))gc='gfr-m';
+    return`<div class="rrow">
+      <span class="gfr-badge ${gc}">${r.gfr}</span>
+      <span style="font-size:11px;font-weight:500;">${r.label}</span>
+      <span style="font-size:12px;">${r.dose}${r.note?` <span style="color:var(--text-hint);font-size:10px;">— ${r.note}</span>`:''}` +`</span></div>`;
+  }).join('');
+
+  const adrRows=drug.adrs.map(a=>`<div class="adr-item">
+    <span class="adr-sev ${sevCls(a.sev)}">${sevLabel(a.sev)}</span>
+    <div><div class="adr-name">${a.name}</div>
+    <div class="adr-action"><i class="fa-solid fa-arrow-right" style="font-size:9px;color:var(--teal-400);margin-right:3px;"></i>${a.action}</div></div>
+  </div>`).join('');
+
+  const noRenal=drug.renal.length===1&&(drug.renal[0].gfr.includes('모든')||drug.renal[0].gfr.includes('금기'));
+
+  view.innerHTML=`
+  <div class="calc-card" style="margin-bottom:16px;">
+    <h3><i class="fa-solid fa-calculator" style="margin-right:5px;"></i>체중 기반 용량 계산기</h3>
+    <div class="calc-row">
+      <input class="wt-input" type="number" id="weightInput" placeholder="체중 (kg)" min="0.5" max="150" step="0.1" oninput="calcDose()" value="${currentWeight}">
+      <span style="font-size:12px;color:var(--text-muted);">kg 입력 시 자동 계산</span>
+    </div>
+    <div class="dose-results" id="doseResults"></div>
+  </div>
+
+  <div class="drug-header">
+    <div class="drug-icon" style="background:${drug.ibg}">${drug.icon}</div>
+    <div class="drug-title">
+      <h1>${drug.name}</h1>
+      <div class="dmeta">${drug.kor} · ${drug.class} · ${drug.cat==='IV'?'주사제':drug.cat==='PO'?'경구':drug.cat==='AV'?'항바이러스':'항진균제'}</div>
+      <div class="tag-row">
+        <span class="tag ${drug.ctag}">${drug.class}</span>
+        ${drug.renal?'<span class="tag rf"><i class="fa-solid fa-kidneys" style="margin-right:2px;"></i> Renal 조정 필요</span>':'<span class="tag ok">Renal 조정 불필요</span>'}
+      </div>
+    </div>
+  </div>
+  ${drug.note?`<div class="wbox" style="margin-bottom:16px;"><i class="fa-solid fa-circle-exclamation" style="margin-right:5px;"></i>${drug.note}</div>`:''}
+
+  <div class="tab-row">
+    <button class="tab-btn active" onclick="switchTab('dosing',this)"><i class="fa-solid fa-pills"></i> 용량/용법</button>
+    ${drug.mix.length?'<button class="tab-btn" onclick="switchTab(\'mix\',this)"><i class="fa-solid fa-syringe"></i> 믹스 방법</button>':''} 
+    <button class="tab-btn" onclick="switchTab('renal',this)"><i class="fa-solid fa-kidneys"></i> 신기능 저하</button>
+    <button class="tab-btn" onclick="switchTab('adr',this)"><i class="fa-solid fa-triangle-exclamation"></i> 부작용</button>
+  </div>
+
+  <div id="tab-dosing" class="tab-content active">
+    <div class="sc ok">
+      <h3><i class="fa-solid fa-pills" style="color:var(--teal-400);"></i> 용량 및 투약 용법</h3>
+      <div style="overflow-x:auto;">
+        <table class="dt">
+          <thead><tr><th>적응증/연령군</th><th>용량</th><th>투약 간격</th><th>경로</th><th>최대 용량</th><th>비고</th></tr></thead>
+          <tbody>${doseRows}</tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  ${drug.mix.length?`<div id="tab-mix" class="tab-content">
+    <div class="sc info">
+      <h3><i class="fa-solid fa-syringe" style="color:var(--blue-400);"></i> 믹스 방법 및 투약 속도</h3>
+      <div class="mix-grid">
+        <div class="mix-row hd"><span>희석 용액</span><span>농도 범위</span><span>투약 속도/시간</span><span>주의사항</span></div>
+        ${mixRows}
+      </div>
+    </div>
+  </div>`:''}
+
+  <div id="tab-renal" class="tab-content">
+    <div class="sc ${drug.renal?'danger':'ok'}">
+      <h3><i class="fa-solid fa-kidneys" style="color:${drug.renal?'var(--red-400)':'var(--teal-400)'};"></i> 
+        신기능 저하 시 용법 — ${drug.renal?'조정 필요':'조정 불필요'}</h3>
+      ${noRenal?`<div class="nbox">${drug.renal[0].dose}</div>`:`<div class="rg">
+        <div class="rrow hd"><span>GFR / CrCl</span><span>단계</span><span>권장 용법</span></div>
+        ${renalRows}
+      </div>`}
+    </div>
+  </div>
+
+  <div id="tab-adr" class="tab-content">
+    <div class="sc warn">
+      <h3><i class="fa-solid fa-triangle-exclamation" style="color:var(--amber-400);"></i> 주요 부작용 및 조치</h3>
+      <div class="adr-list">${adrRows}</div>
+    </div>
+  </div>`;
+  if(currentWeight) calcDose();
+}
+
+function calcIndDose(){
+  const wEl=document.getElementById('indWeightInput');
+  if(!wEl)return;
+  const w=parseFloat(wEl.value);
+  currentWeight=wEl.value;
+  const cont=document.getElementById('indDoseResults');
+  if(!cont||!w||w<=0)return;
+  const drugs=window._currentIndDrugs||[];
+  const results=[];
+  drugs.forEach(drug=>{
+    if(!drug||!drug.doses.length)return;
+    // find first dose with mg/kg
+    const d=drug.doses.find(x=>/([\d.]+)\s*mg\/kg/.test(x.dose));
+    if(!d)return;
+    const m=d.dose.match(/([\d.]+)\s*mg\/kg/);
+    if(!m)return;
+    const total=(parseFloat(m[1])*w).toFixed(1);
+    results.push({name:drug.name,icon:drug.icon,ibg:drug.ibg,total,unit:'mg',route:d.route,interval:d.interval,max:d.max&&d.max!=='-'?d.max:'',id:drug.id});
+  });
+  cont.innerHTML=results.slice(0,6).map(r=>`<div class="drc" style="cursor:pointer;" onclick="selectDrug('${r.id}')">
+    <div class="dlabel">${r.icon} ${r.name}</div>
+    <div class="dval">${r.total} mg</div>
+    <div class="dsub">${r.interval} ${r.route}${r.max?' · 최대 '+r.max:''}</div>
+  </div>`).join('');
+}
+
+function calcDose(){
+  const wEl=document.getElementById('weightInput');
+  if(!wEl)return;
+  const w=parseFloat(wEl.value);
+  currentWeight=wEl.value;
+  const cont=document.getElementById('doseResults');
+  if(!cont)return;
+  if(!w||w<=0||!currentDrug){cont.innerHTML='';return;}
+  const results=currentDrug.doses.slice(0,4).map(d=>{
+    const m=d.dose.match(/([\d.]+)\s*mg\/kg/);
+    if(!m)return null;
+    const mgPerKg=parseFloat(m[1]);
+    const total=(mgPerKg*w).toFixed(1);
+    return{ind:d.ind.length>28?d.ind.substring(0,26)+'…':d.ind,total,interval:d.interval,route:d.route,max:d.max&&d.max!=='-'?`최대 ${d.max}`:''};
+  }).filter(Boolean);
+  cont.innerHTML=results.map(r=>`<div class="drc">
+    <div class="dlabel">${r.ind}</div>
+    <div class="dval">${r.total} mg</div>
+    <div class="dsub">${r.interval} ${r.route} ${r.max}</div>
+  </div>`).join('');
+}
+
+function switchTab(tabId,btn){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  const t=document.getElementById('tab-'+tabId);
+  if(t)t.classList.add('active');
+}
+
+// ===================== UBACTAM & ANTIFUNGALS =====================
+DRUGS.push(
+// --- Ubactam (Ampicillin-Sulbactam) ---
+{id:'ubactam',name:'Ampicillin-Sulbactam',kor:'유박탐 (Ubactam)',cat:'IV',class:'BL/BLI (Unasyn)',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['sepsis','pneumonia','intraabdominal','ssti','meningitis','uti'],
+doses:[
+  {ind:'Neonatal (≤7일, ≤2kg) — AMP 기준',dose:'50 mg/kg/dose (AMP)',interval:'q12h',route:'IV',max:'-',note:'AMP:SUL = 2:1 제형. AMP 기준으로 계산'},
+  {ind:'Neonatal (≤7일, >2kg) — AMP 기준',dose:'50 mg/kg/dose (AMP)',interval:'q8h',route:'IV',max:'-',note:''},
+  {ind:'Neonatal (8-28일) — AMP 기준',dose:'50 mg/kg/dose (AMP)',interval:'q6-8h',route:'IV',max:'-',note:''},
+  {ind:'영아/소아 경증-중등도 — AMP 기준',dose:'100-200 mg/kg/day (AMP)',interval:'÷ q6h',route:'IV',max:'8 g AMP/day',note:'= Unasyn 기준 150-300 mg/kg/day ÷ q6h'},
+  {ind:'영아/소아 중증 — AMP 기준',dose:'200-400 mg/kg/day (AMP)',interval:'÷ q6h',route:'IV',max:'12 g AMP/day',note:'수막염, 에피글로티스 포함'},
+  {ind:'성인 표준',dose:'1.5-3 g (AMP 1-2g + SUL 0.5-1g)',interval:'q6h',route:'IV',max:'12 g AMP/day',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'최대 45 mg/mL (AMP+SUL 합산)',rate:'15-30분',note:'소아: NS 50-100 mL 희석 권장. 안정성: 실온 8시간, 냉장 48시간'},
+],
+renal:[
+  {gfr:'CrCl ≥30',label:'정상/경도',dose:'용량 조정 불필요',note:'q6h 유지'},
+  {gfr:'CrCl 15-29',label:'중등도 저하',dose:'표준 용량 q12h',note:''},
+  {gfr:'CrCl 5-14',label:'중증 저하',dose:'표준 용량 q24h',note:''},
+  {gfr:'CrCl <5 / HD',label:'말기 신부전',dose:'투여 후 HD 시 보충',note:'HD 후 추가 dose 투여'},
+],
+adrs:[
+  {name:'과민반응 (발진, 두드러기, 아나필락시스)',sev:'serious',action:'투여 중단, 에피네프린. 페니실린 알레르기 교차반응 확인'},
+  {name:'위장관 부작용 (설사, 구역)',sev:'common',action:'증상 모니터링'},
+  {name:'간독성 (ALT 상승)',sev:'monitor',action:'장기 투여 시 LFT 모니터링. Sulbactam 성분 관련'},
+  {name:'C. difficile 설사',sev:'serious',action:'즉시 중단, 변 C.diff 검사'},
+],
+note:'AMP 2g + SUL 1g = Unasyn 3g (항상 2:1 비율). 소아에서 AMP 기준으로 용량 계산. β-lactamase 생성균(Acinetobacter 포함) 커버. MRSA 효과 없음. Acinetobacter baumannii에 sulbactam 성분이 고유 항균력 있어 일부 사용.'},
+
+// ===================== ANTIFUNGALS =====================
+{id:'fluconazole',name:'Fluconazole',kor:'플루코나졸',cat:'AF',class:'Azole 항진균제',ctag:'macro',icon:'🟣',ibg:'var(--purple-50)',renal:true,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'칸디다 감염 예방 (소아, PO/IV)',dose:'3 mg/kg/dose (=0.3 mL/kg 시럽)',interval:'QD',route:'PO/IV',max:'400 mg/day',note:'ANC <1000 시작 → 회복 시까지. 경구는 시럽으로'},
+  {ind:'구강인두 칸디다증',dose:'6 mg/kg (1일차 loading)',interval:'이후 3 mg/kg QD',route:'PO',max:'400 mg/day',note:'7-14일'},
+  {ind:'식도 칸디다증',dose:'6-12 mg/kg QD',interval:'QD',route:'PO/IV',max:'400 mg/day',note:'14-21일'},
+  {ind:'침습성 칸디다증 치료',dose:'12 mg/kg (loading)',interval:'이후 6 mg/kg QD',route:'IV/PO',max:'800 mg/day',note:''},
+  {ind:'GVHD (성인 참고)',dose:'4 mg/kg',interval:'TID',route:'PO',max:'-',note:''},
+],
+mix:[
+  {sol:'멸균증류수 24 mL로 용해 (시럽: 10 mg/mL)',conc:'주사: 2 mg/mL (ready-to-use)',rate:'주사: 최대 200 mg/시간 (10 mL/min)',note:'용해 후 실온 14일 유효. 14일 초과 사용 금지'},
+],
+renal:[
+  {gfr:'CrCl ≥50',label:'정상',dose:'용량 조정 불필요',note:''},
+  {gfr:'CrCl <50',label:'저하',dose:'50% 감량 또는 q48h',note:'CrCl 20-51: 50% 또는 100% q48h'},
+  {gfr:'HD',label:'혈액투석',dose:'투석 후 100% 용량 1회',note:'HD 시 약물 제거됨'},
+],
+adrs:[
+  {name:'간독성 (LFT 상승)',sev:'monitor',action:'장기 투여 시 LFT 모니터링'},
+  {name:'QT 연장',sev:'monitor',action:'QT 연장 약물 병용 주의'},
+  {name:'약물 상호작용 (CYP2C9, CYP3A4)',sev:'serious',action:'Warfarin, Cyclosporine, Tacrolimus, VCR 농도 증가. TDM 필수. VCR 투여 환아에서 Itraconazole로 변경 고려'},
+],
+note:'ALL/Lymphoma induction, consolidation, DI에서 ANC <1000 시 예방 목적 사용. Vincristine 투여 환자에서 상호작용 주의 → Itraconazole 변경 고려. 보험: 14일 (ANC 회복 안 되면 연장 가능).'},
+
+{id:'itraconazole',name:'Itraconazole',kor:'이트라코나졸',cat:'AF',class:'Azole 항진균제',ctag:'macro',icon:'🟣',ibg:'var(--purple-50)',renal:true,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'침습성 진균감염 예방 (경구, AML)',dose:'2.5 mg/kg/dose (=0.25 mL/kg)',interval:'BID (공복)',route:'PO 시럽',max:'200 mg/day',note:'소아HO에서 시럽만 처방. 공복 투여 (흡수 ↑)'},
+  {ind:'침습성 아스페르길루스증 (IV)',dose:'Loading: 5 mg/kg q12h × 4회',interval:'→ 5 mg/kg QD 유지',route:'IV',max:'200 mg/dose',note:'1차 max 14일 IV'},
+  {ind:'Candida 감염 (PO 치료)',dose:'2.5 mg/kg/dose',interval:'BID',route:'PO 시럽',max:'200 mg/day',note:''},
+],
+mix:[
+  {sol:'수액오더 불필요 (IV: 첨부된 용액 사용)',conc:'-',rate:'IV: 1시간 이상',note:'경구: 20초간 입안에 머금은 후 삼킴. 삼킨 후 입안 헹구지 않음. 냉장보관. 오렌지주스 or 콜라(다이어트 제외)와 복용 가능'},
+],
+renal:[
+  {gfr:'CrCl ≥30',label:'경구: 정상',dose:'경구 용량 조정 불필요',note:''},
+  {gfr:'CrCl <30',label:'주사: 금기',dose:'IV Itraconazole 사용 금기',note:'경구로 전환'},
+],
+adrs:[
+  {name:'간독성',sev:'serious',action:'LFT 모니터링. 중증 간부전 시 금기'},
+  {name:'약물 상호작용 (CYP3A4 강력 억제)',sev:'serious',action:'Vincristine 병용 금기 (neurotoxicity ↑). Deflazacort 1/3 감량. Cyclosporine, FK-506 농도 증가 → TDM. Tacrolimus 모니터링'},
+  {name:'부정맥 (QT 연장)',sev:'monitor',action:'QT 연장 약물 병용 주의'},
+],
+note:'AML에서 주로 사용 (Fluconazole 대신). ⚠️ Vincristine 투여 전후 36시간 간격 유지 필수 (병용 금기). Deflazacort 병용 시 1/3 용량으로 감량. 소아HO: 시럽만 처방.'},
+
+{id:'voriconazole',name:'Voriconazole',kor:'보리코나졸 (Vfend)',cat:'AF',class:'Azole 항진균제 (광범위)',ctag:'macro',icon:'🟣',ibg:'var(--purple-50)',renal:true,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'소아 (2-11세) IV — SNUBH 권고',dose:'Loading: 7 mg/kg q12h × 2회',interval:'→ 유지: 5 mg/kg q12h',route:'IV',max:'-',note:'최소 주 1회 trough level TDM 필수'},
+  {ind:'소아 (12세 이상, ≥50kg) IV',dose:'Loading: 6 mg/kg q12h × 2회',interval:'→ 유지: 4 mg/kg q12h',route:'IV',max:'-',note:'허가사항 기준'},
+  {ind:'소아 (12세 미만) PO',dose:'9 mg/kg q12h (loading 2회)',interval:'→ 유지: 8 mg/kg q12h',route:'PO',max:'-',note:'IV 선호 후 임상 호전 시 경구 전환 고려'},
+  {ind:'경구 (<40kg)',dose:'100 mg',interval:'BID',route:'PO',max:'-',note:''},
+  {ind:'경구 (≥40kg)',dose:'200 mg',interval:'BID',route:'PO',max:'-',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'0.5-5 mg/mL',rate:'1-2시간 (최대 주입속도: 3 mg/kg/hr)',note:'CrCl <50 mL/min: IV 사용 금기 → 경구로 전환 (SBECD 부형제 축적)'},
+],
+renal:[
+  {gfr:'CrCl ≥50',label:'정상',dose:'IV + PO 모두 사용 가능',note:'TDM 필수'},
+  {gfr:'CrCl <50',label:'저하',dose:'IV 금기 → PO로 변경',note:'경구는 용량 조정 불필요'},
+],
+adrs:[
+  {name:'시각 장애 (광시증, 색각 이상)',sev:'monitor',action:'투여 초기 흔함. 보통 일시적. 지속 시 안과 협진'},
+  {name:'간독성 (LFT 상승)',sev:'serious',action:'정기적 LFT 모니터링. 3개월에 1회 이상 평가'},
+  {name:'광과민성 / 피부암',sev:'serious',action:'장기 투여 시 피부 모니터링. 자외선 차단 필수'},
+  {name:'약물 상호작용 (CYP2C19/3A4)',sev:'serious',action:'Cyclosporine, FK-506 혈중농도 1/2-1/3 감량. Warfarin TDM. VCR 주의'},
+  {name:'QT 연장',sev:'monitor',action:'QT 연장 약물 병용 주의'},
+],
+note:'TDM 필수 (주 1회 이상 trough 측정). 침습성 아스페르길루스증 1차 선택. CrCl <50 시 IV 금기 (SBECD 부형제). 보험: 아스페르길루스증 기왕력 확인된 HSCT 환자에서 예방.'},
+
+{id:'caspofungin',name:'Caspofungin',kor:'카스포펀진 (Cancidas)',cat:'AF',class:'Echinocandin',ctag:'misc',icon:'🔶',ibg:'var(--amber-50)',renal:false,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'소아 (3개월-17세) Loading',dose:'70 mg/m²/day × 1회',interval:'1일차',route:'IV',max:'70 mg',note:'BSA 기반 용량 계산'},
+  {ind:'소아 (3개월-17세) Maintenance',dose:'50 mg/m²/day',interval:'QD',route:'IV',max:'50 mg',note:''},
+  {ind:'성인 Loading',dose:'70 mg',interval:'1일차',route:'IV',max:'70 mg',note:''},
+  {ind:'성인 Maintenance',dose:'50 mg',interval:'QD',route:'IV',max:'50 mg',note:''},
+],
+mix:[
+  {sol:'NS (D5W 사용 금지)',conc:'최대 0.5 mg/mL',rate:'1시간 이상',note:'NS에만 희석. D5W 불안정. 중등도 간부전(Child-Pugh 7-9): 35 mg QD 유지'},
+],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요',note:''},
+],
+adrs:[
+  {name:'간독성',sev:'monitor',action:'Cyclosporine 병용 시 LFT 상승 (Major DI). 병용 주의'},
+  {name:'약물 상호작용',sev:'serious',action:'Cyclosporine: 혈중농도 증가 → LFT 상승. FK-506: 혈중농도 감소 → TDM. Dexamethasone/Carbamazepine/Rifampicin 병용 시 용량 증가 고려'},
+  {name:'주입 관련 반응',sev:'common',action:'발열, 홍조, 두통. 주입 속도 늦추기'},
+],
+note:'호중구 감소성 발열 경험적 치료, 침습성 칸디다증. 타 항진균제 실패 시 아스페르길루스증. ⚠️ Cyclosporine 병용 시 LFT 상승 주의 (Major). FK-506 농도 감소 → TDM 필수.'},
+
+{id:'micafungin',name:'Micafungin',kor:'미카펀진 (Mycamine)',cat:'AF',class:'Echinocandin',ctag:'misc',icon:'🔶',ibg:'var(--amber-50)',renal:false,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'칸디다 예방 (HSCT)',dose:'1 mg/kg/day',interval:'QD',route:'IV',max:'50 mg/day',note:'HSCT: Busulfan 포함 allo → D-2부터. 나머지 → D-8부터'},
+  {ind:'칸디다 예방 일반',dose:'1-2 mg/kg/day',interval:'QD',route:'IV',max:'50 mg/day',note:'ANC >500 × 5일 이상까지'},
+  {ind:'침습성 칸디다증 치료',dose:'2-4 mg/kg/day',interval:'QD',route:'IV',max:'100-200 mg/day',note:'Fluconazole 치료 실패 시'},
+  {ind:'식도 칸디다증 (성인)',dose:'150 mg',interval:'QD',route:'IV',max:'150 mg/day',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'0.5-1.5 mg/mL',rate:'1시간 이상',note:'차광 필요. Busulfan과 대사경로 동일 → DI 주의'},
+],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요',note:''},
+],
+adrs:[
+  {name:'간독성',sev:'monitor',action:'LFT 모니터링'},
+  {name:'주입 관련 반응',sev:'common',action:'주입 속도 1시간 이상 유지'},
+  {name:'Busulfan 상호작용',sev:'monitor',action:'Busulfan 대사 경로 동일. 농도 변화 모니터링'},
+],
+note:'HSCT 환자 칸디다 예방 1차. 보험: HSCT 칸디다 예방 급여, 치료는 Fluconazole 실패 시만. Busulfan conditioning 포함 allo HSCT: D-2부터 시작.'},
+
+{id:'amphotericin_b_lipo',name:'Amphotericin B Liposomal',kor:'암포테리신 B 리포소말 (Ambisome)',cat:'AF',class:'Polyene 항진균제',ctag:'misc',icon:'🔴',ibg:'var(--red-50)',renal:false,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'소아 (성인과 동일 kg당 용량)',dose:'3-5 mg/kg/day',interval:'QD',route:'IV',max:'10 mg/kg/day (HIV 침습성 칸디다/아스페르길루스)',note:'소아HO: 통상 사용하지 않음. 필요 시 사용'},
+  {ind:'호중구 감소성 발열 경험적 치료',dose:'3 mg/kg/day',interval:'QD',route:'IV',max:'5 mg/kg/day',note:''},
+  {ind:'CGD (만성육아종질환)',dose:'3-5 mg/kg/day',interval:'QD',route:'IV',max:'-',note:'원인균 미증명 시도 1차 사용 가능'},
+],
+mix:[
+  {sol:'D5W만 사용 (NS 절대 금지)',conc:'재구성: 50mg vial + WFI 12mL → 4 mg/mL',rate:'2시간 이상 (>5 mg/kg: 반드시 2시간 이상)',note:'희석: D5W (추천 농도 1.0 mg/mL, 범위 0.2-2.0 mg/mL). NS 혼합 절대 금지 (침전)'},
+],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요. SCr 2.5-3.0 mg/dL 이상 상승 시 감량/중단 고려',note:''},
+],
+adrs:[
+  {name:'주입 관련 반응 (발열, 오한, 저혈압)',sev:'monitor',action:'기존 Amphotericin B보다 현저히 낮음. 필요 시 전처치 (Hydrocortisone)'},
+  {name:'신독성',sev:'monitor',action:'기존보다 낮으나 SCr 모니터링 필요. SCr 2.5-3.0 이상 상승 시 감량'},
+  {name:'저칼륨혈증/저마그네슘혈증',sev:'monitor',action:'전해질 모니터링. 보충 투여'},
+],
+note:'⚠️ NS 혼합 절대 금지. D5W만 사용. 재구성 후 WFI로만. 기존 Amphotericin B보다 신독성, 주입 반응 현저히 적음. 소아HO에서 필요 시 사용 (일상적으로는 사용 안 함).'},
+
+{id:'posaconazole',name:'Posaconazole',kor:'포사코나졸 (Noxafil)',cat:'AF',class:'Azole 항진균제 (광범위)',ctag:'macro',icon:'🟣',ibg:'var(--purple-50)',renal:false,
+indications:['febrile_neutropenia'],
+doses:[
+  {ind:'소아 (8개월-12세 미만) 예방',dose:'4 mg/kg/dose',interval:'TID (6 mg/kg QD)',route:'PO 시럽',max:'-',note:'cGVHD, AML induction 예방. 반드시 식사와 함께'},
+  {ind:'소아 (12세 이상) 예방',dose:'200 mg',interval:'TID',route:'PO 시럽/정',max:'-',note:'AML ANC 감소 수일 전 시작 → ANC ≥500 후 7일까지'},
+  {ind:'성인 — 불응성/불내성 침습성 진균',dose:'400 mg (=10 mL)',interval:'BID',route:'PO 시럽',max:'-',note:'식사/영양보충제 불가 시 200 mg QID'},
+  {ind:'성인 Loading (정제)',dose:'300 mg',interval:'BID D1 → 300 mg QD 유지',route:'PO 정제',max:'-',note:'정제: 식사와 무관. 18세 이상 보험'},
+],
+mix:[],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'신기능 조정 불필요',note:''},
+],
+adrs:[
+  {name:'간독성',sev:'monitor',action:'LFT 모니터링'},
+  {name:'QT 연장',sev:'serious',action:'QT 연장 약물 병용 금기. ECG 모니터링'},
+  {name:'약물 상호작용 (CYP3A4 억제)',sev:'serious',action:'Vincristine/Vinblastine: neurotoxicity ↑. Midazolam 농도 증가. HMG-CoA 억제제 병용 금기'},
+],
+note:'⚠️ 시럽: 반드시 식사 또는 경구 영양보충제와 함께 투여. 정제와 시럽은 용법 달라 교차 사용 금지. 보험: AML induction, cGVHD 고용량 면역억제요법 환자. 18세 미만 정제 비보험.'},
+
+{id:'nystatin',name:'Nystatin',kor:'니스타틴',cat:'AF',class:'Polyene 항진균제 (경구)',ctag:'macro',icon:'🟤',ibg:'var(--gray-50)',renal:false,
+indications:[],
+doses:[
+  {ind:'소아 <1세',dose:'1 mL',interval:'QID',route:'PO 시럽',max:'-',note:'공복에 투여'},
+  {ind:'소아 1-6세 미만',dose:'2 mL',interval:'QID',route:'PO 시럽',max:'-',note:''},
+  {ind:'소아 ≥6세',dose:'5 mL',interval:'QID',route:'PO 시럽',max:'-',note:''},
+],
+mix:[],
+renal:[
+  {gfr:'모든 단계',label:'조정 불필요',dose:'전신 흡수 거의 없음',note:''},
+],
+adrs:[
+  {name:'위장관 부작용',sev:'common',action:'구역, 구토. 식사와 관계없이 투여 가능'},
+],
+note:'구강/위장관 칸디다 예방/치료. 전신 흡수 거의 없어 전신 진균 감염에 무효. 삼키기 전 입 안에 가능한 오래 머금음. 삼킨 후 30분 식음료 금지. 차광, 25℃ 이하 보관.'}
+);
+
+// ampicillin placeholder
+DRUGS.unshift({id:'ampicillin',name:'Ampicillin',kor:'암피실린',cat:'IV',class:'페니실린계',ctag:'beta',icon:'🔵',ibg:'var(--blue-50)',renal:true,
+indications:['sepsis','meningitis','uti','intraabdominal'],
+doses:[
+  {ind:'Neonatal (≤7일, <2kg)',dose:'50 mg/kg/dose',interval:'q12h',route:'IV',max:'-',note:'GBS/수막염 시 q8h'},
+  {ind:'Neonatal (≤7일, ≥2kg)',dose:'50 mg/kg/dose',interval:'q8h',route:'IV',max:'-',note:''},
+  {ind:'Neonatal (8-28일)',dose:'50 mg/kg/dose',interval:'q6h',route:'IV',max:'-',note:''},
+  {ind:'수막염 (영아/소아)',dose:'100 mg/kg/dose',interval:'q6h',route:'IV',max:'12 g/day',note:''},
+  {ind:'중증 감염 (소아)',dose:'50 mg/kg/dose',interval:'q6h',route:'IV',max:'8 g/day',note:''},
+],
+mix:[
+  {sol:'NS or D5W',conc:'10-40 mg/mL (neonatal: ≤10mg/mL)',rate:'30분 이상',note:'Gentamicin과 1시간 이상 간격 (혼합 금지)'},
+],
+renal:[
+  {gfr:'CrCl ≥30',label:'정상',dose:'용량 조정 불필요',note:''},
+  {gfr:'CrCl 10-29',label:'중등도 저하',dose:'q8-12h 간격 연장',note:''},
+  {gfr:'CrCl <10',label:'중증 저하',dose:'q12h',note:'HD 후 보충 투여'},
+],
+adrs:[
+  {name:'과민반응 (두드러기, 발진)',sev:'monitor',action:'투여 중단, 항히스타민제. 아나필락시스 시 에피네프린'},
+  {name:'C. difficile 설사',sev:'serious',action:'즉시 투여 중단, 변 C.diff 검사'},
+],
+note:'EOS Neonatal sepsis 경험적 치료에 Gentamicin과 병용. GBS, Listeria에 효과적. Gentamicin과 혼합 절대 금지 (불활성화).'});
+
+init();
+</script>
+</body>
+</html>
